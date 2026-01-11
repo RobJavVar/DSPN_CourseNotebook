@@ -16,7 +16,7 @@ execute:
 
 # Information about where the book exists on the web
 repository:
-  url                       : https://github.com/CoAxLab/Data-Explorations
+  url                       : https://github.com/RobJavVar/DSPN_CourseNotebook
   path_to_book              : book/
   branch                    : main
 
