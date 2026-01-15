@@ -16,7 +16,6 @@
 
 
 ## Slides (PDF)
-### [Slides not yet uploaded]
-<!-- [![The value of openness](../thumbnails/the-value-of-openness.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/the-value-of-openness.pdf "The value of openness") -->
+[![The value of openness](../thumbnails/the-value-of-openness.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/02_the-value-of-openness.pdf "The value of openness")
 
 

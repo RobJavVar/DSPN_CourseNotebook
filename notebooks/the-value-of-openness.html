@@ -715,8 +715,8 @@ different folder, we simply type</p>
 <section id="set-up-a-new-repository">
 <h2>Set up a new repository<a class="headerlink" href="#set-up-a-new-repository" title="Link to this heading">#</a></h2>
 <p>You can clone a repository that exists on GitHub. This will download all files present in that repository to a folder with the name of the repository and will have the repository all set up and ready to go. The folder will be created in whatever folder your terminal is currently in! Then you can navigate to the repository folder by using the <strong><code class="docutils literal notranslate"><span class="pre">cd</span></code></strong> command.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/CoAxLab/DataSciencePsychNeuro_CMU85732.git
-<span class="nb">cd</span><span class="w"> </span>DataSciencePsychNeuro_CMU85732
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/RobJavVar/DataSciencePsychNeuro.git
+<span class="nb">cd</span><span class="w"> </span>DataSciencePsychNeuro
 </pre></div>
 </div>
 <p>Alternatively, you can also initialize a repository for that project. Make a new empty folder for your project. You can do that either manually, or by typing <strong><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">pathname</span></code></strong> in the terminal, where pathname is the full path of your new folder.</p>
@@ -789,7 +789,7 @@ git<span class="w"> </span>init
 <h2>Working on a different branch<a class="headerlink" href="#working-on-a-different-branch" title="Link to this heading">#</a></h2>
 <p>At this point you might be asking, what is the point of all of this? You have made changes and saved them, but this hasn’t really affected any part of your workflow. Let’s talk about branches.</p>
 <p>If you imagine your project as a tree, you can think of each branch of a tree as an alternative version of your project. You can work on multiple versions/branches of your project at the same time. Your main branch is called <strong>master</strong>. It is automatically created when you initialize a repository and unless you create other branches, it will be the only one. At any point in time, you will always be in a certain branch, and any changes you make to your files at that time will only be made to files in that branch. When you create a new branch, you make a copy of the branch from which you created it. Importantly, this does not actually copy your files, and if you go into your project folder you will not see anything different at that point. Once you’ve made and commit any changes, you can switch between branches. Any time you switch to a branch, the files in your folder will be replaced with the files corresponding to the last changes in the branch. You can also merge branches together, implementing changes from one branch into another.</p>
-<p><img alt="picture" src="https://drive.google.com/uc?export=view&amp;id=12FwkUrkU3RMa7ed_tA9D-KZLwbZsJhsy" /></p>
+<p><a class="reference external" href="https://drive.google.com/uc?export=view&amp;amp;id=12FwkUrkU3RMa7ed_tA9D-KZLwbZsJhsy">Visualization</a></p>
 <p><a class="reference external" href="https://www.atlassian.com/git/tutorials/using-branches"><em>image source</em></a></p>
 <p>How is this useful? A very common workflow that protects your files is one in which you have two branches, a <strong>master</strong> branch, and a <strong>development</strong> branch. In this setup, you never work in your master branch - you always make changes in the development branch and once you are satisfied with those changes, you merge them into your master branch. That allows you to easily switch between your current in-progress changes and your last working version of your script in your master branch.</p>
 <p>To create a new branch and switch to it you can use the following command:</p>
@@ -910,7 +910,7 @@ git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class
 </div>
 <p>  11. Rinse and repeat :)</p>
 <p>Git can be pretty confusing at first, but fortunately there are tons of resources available online. If you want a more comprehensive introduction, I recommend Jenny Bryan’s <a class="reference external" href="https://happygitwithr.com/">Happy Git</a> bookdown, which is specifically designed for people familiar with R. You can also keep an eye out for Carpentries workshops on git and the command line, which are offered regularly through the <a class="reference external" href="https://www.library.cmu.edu/services/carpentries">CMU library</a>.</p>
-<p><em>Notebook authored by Ven Popov and edited by Krista Bond, Charles Wu, Patience Stevens, Amy Sentis, and Fiona Horner.</em></p>
+<p><em>Notebook authored by Ven Popov and edited by Roberto Vargas, Krista Bond, Charles Wu, Patience Stevens, Amy Sentis, and Fiona Horner.</em></p>
 </section>
 
     <script type="text/x-thebe-config">
