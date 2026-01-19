@@ -1,0 +1,5 @@
+# Discussion questions
+
+1.	The “Workflow Specification” step of the of audited data pipeline involves defining a set of automated checks with specification (e.g., determining if the value range is appropriate (e.g., excluding people who are 127 years old), looking for NaN). Can you generate a list of possible anomalies that could arise within data and how you would implement that automation (e.g., set a range of allowable values (18 < participantAge < 90)). Feel free to examine data you are currently working with for inspiration. Moreover, are there any existing tools (e.g., python libraries / R libraries) that exist for implementing this automation.
+
+2.	How can steps that you take in your data cleansing pipeline potentially harm the mapping between the “real world” and your data table? Provide a specific example to illustrate your answer.

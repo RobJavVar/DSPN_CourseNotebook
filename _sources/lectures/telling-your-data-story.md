@@ -1,0 +1,17 @@
+# Telling your data story
+=======================
+
+## Required readings
+
+[Mensh, B., & Kording, K. (2017). Ten simple rules for structuring papers. PLoS Comput Biol, 13(9), e1005619](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005619)
+
+## Lecture (Video)
+
+<!--[![Telling your data story](../thumbnails/telling-your-data-story.jpeg)](https://www.youtube.com/watch?v=QKS559pI4KQ "Telling your data story")-->
+### [Video not yet available]
+
+
+## Slides (PDF)
+
+<!--[![Telling your data story](../thumbnails/telling-your-data-story.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/telling-your-data-story.pdf "Telling your data story")-->
+### [Slides not yet available]
