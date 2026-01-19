@@ -25,22 +25,22 @@ parts:
       sections:
       - file: notebooks/data-as-objects-and-architectures
       - file: discussions/data-as-objects-and-architectures
-      - file: exercises/data-as-objects-and-architectures
+      - file: exercises/03_data-as-objects-and-architectures
     - file: lectures/techniques-for-data-cleansing
       sections:
       - file: notebooks/techniques-for-data-cleansing
       - file: discussions/techniques-for-data-cleansing
-      - file: exercises/techniques-for-data-cleansing
+      - file: exercises/04_techniques-for-data-cleansing
     - file: lectures/visualization-as-analysis
       sections:
       - file: notebooks/visualization-as-analysis
       - file: discussions/visualization-as-analysis
-      - file: exercises/visualization-as-analysis
+      - file: exercises/05_visualization-as-analysis
     - file: lectures/visualization-through-human-eyes
       sections:
       - file: notebooks/visualization-through-human-eyes
       - file: discussions/visualization-through-human-eyes
-      - file: exercises/visualization-through-human-eyes
+      - file: exercises/06_visualization-through-human-eyes
   - caption: Knowledge
     chapters:
     - file: lectures/statistical-learning-theory
@@ -50,12 +50,12 @@ parts:
       sections:
       - file: notebooks/linear-models
       - file: discussions/linear-models
-      - file: exercises/linear-models
+      - file: exercises/07_linear-models
     - file: lectures/the-ordinary-least-squares-solution
       sections: 
       - file: notebooks/the-ordinary-least-squares-solution
       - file: discussions/the-ordinary-least-squares-solution
-      - file: exercises/the-ordinary-least-squares-solution
+      - file: exercises/08_the-ordinary-least-squares-solution
     - file: lectures/limits-of-linear-regression
       sections: 
       - file: notebooks/limits-of-linear-regression
@@ -64,52 +64,52 @@ parts:
       sections:
       - file: notebooks/classifiers
       - file: discussions/classifiers
-      - file: exercises/classifiers
+      - file: exercises/09_classifiers
     - file: lectures/mixed-effects-models
       sections: 
       - file: notebooks/mixed-effects-models
       - file: discussions/mixed-effects-models
-      - file: exercises/mixed-effects-models
+      - file: exercises/10_mixed-effects-models
     - file: lectures/the-beauty-of-knn
       sections:
       - file: notebooks/the-beauty-of-knn
       - file: discussions/the-beauty-of-knn
-      - file: exercises/the-beauty-of-knn
+      - file: exercises/11_the-beauty-of-knn
     - file: lectures/cross-validation
       sections: 
       - file: notebooks/cross-validation
       - file: discussions/cross-validation
-      - file: exercises/cross-validation
+      - file: exercises/12_cross-validation
     - file: lectures/resampling-methods
       sections:
       - file: notebooks/resampling-methods
       - file: discussions/resampling-methods
-      - file: exercises/resampling-methods
+      - file: exercises/13_resampling-methods
     - file: lectures/mediation-and-moderation
       sections:
       - file: notebooks/mediation-and-moderation
       - file: discussions/mediation-and-moderation
-      - file: exercises/mediation-and-moderation
+      - file: exercises/14_mediation-and-moderation
     - file: lectures/power-analysis-via-simulations
       sections:
       - file: notebooks/power-analysis-via-simulations
       - file: discussions/power-analysis-via-simulations
-      - file: exercises/power-analysis-via-simulations
+      - file: exercises/15_power-analysis-via-simulations
     - file: lectures/selecting-the-best-model
       sections: 
       - file: notebooks/selecting-the-best-model
       - file: discussions/selecting-the-best-model
-      - file: exercises/selecting-the-best-model
+      - file: exercises/16_selecting-the-best-model
     - file: lectures/regularized-regression
       sections: 
       - file: notebooks/regularized-regression
       - file: discussions/regularized-regression
-      - file: exercises/regularized-regression
+      - file: exercises/17_regularized-regression
     - file: lectures/principal-component-methods
       sections:
       - file: notebooks/principal-component-methods
       - file: discussions/principal-component-methods
-      - file: exercises/principal-component-methods
+      - file: exercises/18_principal-component-methods
   - caption: Understanding
     chapters:
     - file: lectures/reconsidering-the-p-value
@@ -122,6 +122,6 @@ parts:
     - file: lectures/telling-your-data-story
       sections:
       - file: discussions/telling-your-data-story
-    - file: lectures/professional-landscape-outside-academia
+    - file: lectures/professional-nonacademia
       sections:
-      - file: discussions/professional-landscape-outside-academia
+      - file: discussions/professional-nonacademia

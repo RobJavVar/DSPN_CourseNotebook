@@ -7,8 +7,11 @@
 
 ## Lecture (Video)
 
-[![Mediation and moderation](../thumbnails/mediation-and-moderation.jpeg)](https://youtu.be/4tBi1BArYd8 "Mediation and moderation")
+<!--[![Mediation and moderation](../thumbnails/mediation-and-moderation.jpeg)](https://youtu.be/4tBi1BArYd8 "Mediation and moderation")-->
+### [Video not yet available]
+
 
 ## Slides (PDF)
 
-[![Mediation and moderation](../thumbnails/mediation-and-moderation.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/mediation-and-moderation.pdf "Mediation and moderation")
+<!--[![Mediation and moderation](../thumbnails/mediation-and-moderation.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/mediation-and-moderation.pdf "Mediation and moderation")-->
+### [Video not yet available]

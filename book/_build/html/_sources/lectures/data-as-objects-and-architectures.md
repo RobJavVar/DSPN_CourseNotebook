@@ -11,8 +11,13 @@
 
 ## Lecture (Video)
 
-[![Data as objects and architectures](../thumbnails/data-as-objects-and-architectures.jpeg)](https://www.youtube.com/watch?v=9LPCZhDD-sU "Data as objects and architectures")
+<!--[![Data as objects and architectures](../thumbnails/data-as-objects-and-architectures.jpeg)](https://www.youtube.com/watch?v=9LPCZhDD-sU "Data as objects and architectures")-->
+### [Video not yet available]
+
 
 ## Slides (PDF)
 
-[![Data as objects and architectures](../thumbnails/data-as-objects-and-architectures.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/data-as-objects-and-architectures.pdf "Data as objects and architectures")
+<!--[![Data as objects and architectures](../thumbnails/data-as-objects-and-architectures.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/data-as-objects-and-architectures.pdf "Data as objects and architectures")-->
+### [Slides not yet available]
+
+

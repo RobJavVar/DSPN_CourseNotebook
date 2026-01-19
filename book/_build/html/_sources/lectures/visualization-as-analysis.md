@@ -9,8 +9,10 @@
 
 ## Lecture (Video)
 
-[![Visualization as analysis](../thumbnails/visualization-as-analysis.jpeg)](https://www.youtube.com/watch?v=rFoyvNYd3Lo "Visualization as analysis")
+<!--[![Visualization as analysis](../thumbnails/visualization-as-analysis.jpeg)](https://www.youtube.com/watch?v=rFoyvNYd3Lo "Visualization as analysis")-->
+### [Video not yet available]
 
 ## Slides (PDF)
 
-[![Visualization as analysis](../thumbnails/visualization-as-analysis.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/visualization-as-analysis.pdf "Visualization as analysis")
+<!--[![Visualization as analysis](../thumbnails/visualization-as-analysis.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/visualization-as-analysis.pdf "Visualization as analysis")-->
+### [Slides not yet available]

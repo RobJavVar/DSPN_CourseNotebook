@@ -7,9 +7,10 @@
 
 ## Lecture (Video)
 
-[![The ordinary least squares solution](../thumbnails/the-ordinary-least-squares-solution.jpeg)](https://youtu.be/xNHclbfe41A "The ordinary least squares solution")
-
+<!--[![The ordinary least squares solution](../thumbnails/the-ordinary-least-squares-solution.jpeg)](https://youtu.be/xNHclbfe41A "The ordinary least squares solution")-->
+### [Video not yet available]
 
 ## Slides (PDF)
 
-[![The ordinary least squares solution](../thumbnails/the-ordinary-least-squares-solution.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/ordinary-least-squares-solution.pdf "The ordinary least squares solution")
+<!--[![The ordinary least squares solution](../thumbnails/the-ordinary-least-squares-solution.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/ordinary-least-squares-solution.pdf "The ordinary least squares solution")-->
+### [Slides not yet available]

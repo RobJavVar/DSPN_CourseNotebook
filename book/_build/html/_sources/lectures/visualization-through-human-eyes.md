@@ -7,8 +7,10 @@
 
 ## Lecture (Video)
 
-[![Visualization through human eyes](../thumbnails/visualization-through-human-eyes.jpeg)](https://www.youtube.com/watch?v=uop-W5i4Yrs "Visualization through human eyes")
+<!--[![Visualization through human eyes](../thumbnails/visualization-through-human-eyes.jpeg)](https://www.youtube.com/watch?v=uop-W5i4Yrs "Visualization through human eyes")-->
+### [Video not yet available]
 
 ## Slides (PDF)
 
-[![Visualization through human eyes](../thumbnails/visualization-through-human-eyes.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/visualization-through-human-eyes.pdf "Visualization through human eyes")
+<!--[![Visualization through human eyes](../thumbnails/visualization-through-human-eyes.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/visualization-through-human-eyes.pdf "Visualization through human eyes")-->
+### [Slides not yet available]

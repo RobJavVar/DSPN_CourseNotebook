@@ -7,8 +7,11 @@
 
 ## Lecture (Video)
 
-[![Reconsidering the p-value](../thumbnails/reconsidering-the-p-value.jpeg)](https://www.youtube.com/watch?v=r3oAgXX9lyg "Reconsidering the p-value")
+<!--[![Reconsidering the p-value](../thumbnails/reconsidering-the-p-value.jpeg)](https://www.youtube.com/watch?v=r3oAgXX9lyg "Reconsidering the p-value")-->
+### [Video not yet available]
+
 
 ## Slides (PDF)
 
-[![Reconsidering the p-value](../thumbnails/reconsidering-the-p-value.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/reconsidering-the-p-value.pdf "Reconsidering the p-value")
+<!--[![Reconsidering the p-value](../thumbnails/reconsidering-the-p-value.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/reconsidering-the-p-value.pdf "Reconsidering the p-value")-->
+### [Slides not yet available]

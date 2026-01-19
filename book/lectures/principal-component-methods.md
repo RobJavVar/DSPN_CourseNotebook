@@ -7,8 +7,11 @@
 
 ## Lecture (Video)
 
-[![Principal component methods](../thumbnails/principal-component-methods.jpeg)](https://www.youtube.com/watch?v=Watmz5hdnyM "Principal component methods")
+<!--[![Principal component methods](../thumbnails/principal-component-methods.jpeg)](https://www.youtube.com/watch?v=Watmz5hdnyM "Principal component methods")-->
+### [Video not yet available]
+
 
 ## Slides (PDF)
 
-[![Principal component methods](../thumbnails/principal-component-methods.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/principal-component-methods.pdf "Principal component methods")
+<!--[![Principal component methods](../thumbnails/principal-component-methods.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/principal-component-methods.pdf "Principal component methods")-->
+### [Slides not yet available]

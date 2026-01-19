@@ -7,8 +7,10 @@
 
 ## Lecture (Video)
 
-[![Regularized regression](../thumbnails/regularized-regression.jpeg)](https://www.youtube.com/watch?v=Jf8MdQD-yyA "Regularized regression")
+<!--[![Regularized regression](../thumbnails/regularized-regression.jpeg)](https://www.youtube.com/watch?v=Jf8MdQD-yyA "Regularized regression")-->
+### [Video not yet available]
 
 ## Slides (PDF)
 
-[![Regularized regression](../thumbnails/regularized-regression.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/regularized-regression.pdf "Regularized regression")
+<!--[![Regularized regression](../thumbnails/regularized-regression.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/regularized-regression.pdf "Regularized regression")-->
+### [Slides not yet available]

@@ -7,8 +7,10 @@
 
 ## Lecture (Video)
 
-[![Power analysis via simulations](../thumbnails/power-analysis-via-simulations.jpeg)](https://youtu.be/F2-EeVglCow "Power analysis via simulations")
+<!--[![Power analysis via simulations](../thumbnails/power-analysis-via-simulations.jpeg)](https://youtu.be/F2-EeVglCow "Power analysis via simulations")-->
+### [Video not yet available]
 
 ## Slides (PDF)
 
-[![Power analysis via simulations](../thumbnails/power-analysis-via-simulations.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/power-analysis-via-simulations.pdf "Power analysis via simulations")
+<!--[![Power analysis via simulations](../thumbnails/power-analysis-via-simulations.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/power-analysis-via-simulations.pdf "Power analysis via simulations")-->
+### [Slides not yet available]

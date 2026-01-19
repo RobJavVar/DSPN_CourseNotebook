@@ -7,8 +7,11 @@
 
 ## Lecture (Video)
 
-[![Cross validation](../thumbnails/cross-validation.jpeg)](https://www.youtube.com/watch?v=YCTOdDkKXAU "Cross validation")
+<!--[![Cross validation](../thumbnails/cross-validation.jpeg)](https://www.youtube.com/watch?v=YCTOdDkKXAU "Cross validation")-->
+### [Video not yet available]
+
 
 ## Slides (PDF)
 
-[![Cross validation](../thumbnails/cross-validation.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/cross-validation.pdf "Cross validation")
+<!--[![Cross validation](../thumbnails/cross-validation.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/cross-validation.pdf "Cross validation")-->
+### [Slides not yet available]

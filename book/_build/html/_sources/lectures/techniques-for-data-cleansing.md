@@ -7,8 +7,10 @@
 
 ## Lecture (Video)
 
-[![Techniques for data cleansing](../thumbnails/techniques-for-data-cleansing.jpeg)](https://www.youtube.com/watch?v=HaiaQh-pyw0 "Techniques for data cleansing")
+<!--[![Techniques for data cleansing](../thumbnails/techniques-for-data-cleansing.jpeg)](https://www.youtube.com/watch?v=HaiaQh-pyw0 "Techniques for data cleansing")-->
+### [Video not yet available]
 
 ## Slides (PDF)
 
-[![Techniques for data cleansing](../thumbnails/techniques-for-data-cleansing.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/techniques-for-data-cleansing.pdf "Techniques for data cleansing")
+<!--[![Techniques for data cleansing](../thumbnails/techniques-for-data-cleansing.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/techniques-for-data-cleansing.pdf "Techniques for data cleansing")-->
+### [Slides not yet available]

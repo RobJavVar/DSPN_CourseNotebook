@@ -7,8 +7,11 @@
 
 ## Lecture (Video)
 
-[![Resampling methods](../thumbnails/resampling-methods.jpeg)](https://www.youtube.com/watch?v=aDfEYKdkIGI "Resampling methods")
+<!--[![Resampling methods](../thumbnails/resampling-methods.jpeg)](https://www.youtube.com/watch?v=aDfEYKdkIGI "Resampling methods")-->
+### [Video not yet available]
+
 
 ## Slides (PDF)
 
-[![Resampling methods](../thumbnails/resampling-methods.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/resampling-methods.pdf "Resampling methods")
+<!--[![Resampling methods](../thumbnails/resampling-methods.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/resampling-methods.pdf "Resampling methods")-->
+### [Slides not yet available]

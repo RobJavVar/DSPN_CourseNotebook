@@ -9,8 +9,10 @@
 
 ## Lecture (Video)
 
-[![Mixed effects models](../thumbnails/mixed-effects-models.jpeg)](https://youtu.be/w-niplAO22I "Mixed effects models")
+<!--[![Mixed effects models](../thumbnails/mixed-effects-models.jpeg)](https://youtu.be/w-niplAO22I "Mixed effects models")-->
+### [Video not yet available]
 
 ## Slides (PDF)
 
-[![Mixed effects models](../thumbnails/mixed-effects-models.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/mixed-effects-models.pdf "Mixed effects models")
+<!--[![Mixed effects models](../thumbnails/mixed-effects-models.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/mixed-effects-models.pdf "Mixed effects models")-->
+### [Slides not yet available]

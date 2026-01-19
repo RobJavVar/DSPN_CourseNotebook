@@ -7,8 +7,11 @@
 
 ## Lecture (Video)
 
-[![Telling your data story](../thumbnails/telling-your-data-story.jpeg)](https://www.youtube.com/watch?v=QKS559pI4KQ "Telling your data story")
+<!--[![Telling your data story](../thumbnails/telling-your-data-story.jpeg)](https://www.youtube.com/watch?v=QKS559pI4KQ "Telling your data story")-->
+### [Video not yet available]
+
 
 ## Slides (PDF)
 
-[![Telling your data story](../thumbnails/telling-your-data-story.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/telling-your-data-story.pdf "Telling your data story")
+<!--[![Telling your data story](../thumbnails/telling-your-data-story.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/telling-your-data-story.pdf "Telling your data story")-->
+### [Slides not yet available]

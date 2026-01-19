@@ -7,8 +7,10 @@
 
 ## Lecture (Video)
 
-[![Classifiers](../thumbnails/classifiers.jpeg)](https://www.youtube.com/watch?v=r78WCl1vSik "Classifiers")
+<!--[![Classifiers](../thumbnails/classifiers.jpeg)](https://www.youtube.com/watch?v=r78WCl1vSik "Classifiers")-->
+### [Video not yet available]
 
 ## Slides (PDF)
 
-[![Classifiers](../thumbnails/classifiers.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/classifiers.pdf "Classifiers")
+<!--[![Classifiers](../thumbnails/classifiers.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/classifiers.pdf "Classifiers")-->
+### [Slides not yet available]

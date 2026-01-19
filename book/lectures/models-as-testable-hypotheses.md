@@ -10,8 +10,10 @@
 
 ## Lecture (Video)
 
-[![Models as testable hypotheses](../thumbnails/models-as-testable-hypotheses.jpeg)](https://youtu.be/aJUWPnRpnpQ "Models as testable hypotheses")
+<!--[![Models as testable hypotheses](../thumbnails/models-as-testable-hypotheses.jpeg)](https://youtu.be/aJUWPnRpnpQ "Models as testable hypotheses")-->
+### [Video not yet available]
 
 ## Slides (PDF)
 
-[![Models as testable hypotheses](../thumbnails/models-as-testable-hypotheses.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/models-as-testable-hypotheses.pdf "Models as testable hypotheses")
+<!--[![Models as testable hypotheses](../thumbnails/models-as-testable-hypotheses.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/models-as-testable-hypotheses.pdf "Models as testable hypotheses")-->
+### [Slides not yet available]
