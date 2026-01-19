@@ -43,9 +43,9 @@ parts:
       - file: exercises/06_visualization-through-human-eyes
   - caption: Knowledge
     chapters:
-    - file: lectures/statistical-learning-theory
+    - file: lectures/bias-variance-tradeoff
       sections:
-      - file: discussions/statistical-learning-theory
+      - file: discussions/bias-variance-tradeoff
     - file: lectures/linear-models
       sections:
       - file: notebooks/linear-models
