@@ -14,5 +14,4 @@
 
 ## Slides (PDF)
 
-<!--[![What is a theory?](../thumbnails/what-is-a-theory.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/what-is-a-theory.pdf "What is a theory?") -->
-### [Slides not yet available]
+[![What is a theory?](../thumbnails/what-is-a-theory.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/03_what-is-a-theory.pdf "What is a theory?") 
