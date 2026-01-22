@@ -1,5 +1,5 @@
 # Discussion questions
 
-1. Provide two examples of a hypothesis, one stated in a falsifiable manner the other stated in an unfalsifiable manner. Explain why one can be falsified and the other cannot.
+1. If two very different generative models produce the same statistical patterns in the data, how should researchers decide between them? What kinds of evidence or tests would actually help?
 
-2. Guest and Martin make the case that models act as mediators between theory and empirical observations. The lecture extended this idea by distinguising between generative models (mechanistic systems that generate predictions) and statistical models (descriptions of functional relationships), the latter being a formal description of the hypothesis being tested on empirical observations and the former being a less abstract formalism of your high level theory (e.g., an artificial neural network). Using a hypothetical example, illustrate how generative and statistical models work together to evaluate scientific theories.
+2. When does matching human data count as an explanation rather than just a prediction? What would a model need to do in addition to fitting the data to genuinely explain a cognitive process?
