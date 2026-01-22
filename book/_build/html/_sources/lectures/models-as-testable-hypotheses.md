@@ -15,5 +15,4 @@
 
 ## Slides (PDF)
 
-<!--[![Models as testable hypotheses](../thumbnails/models-as-testable-hypotheses.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/models-as-testable-hypotheses.pdf "Models as testable hypotheses")-->
-### [Slides not yet available]
+[![Models as testable hypotheses](../thumbnails/models-as-testable-hypotheses.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/04_models-as-testable-hypotheses.pdf "Models as testable hypotheses")
