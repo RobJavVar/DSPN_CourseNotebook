@@ -600,7 +600,20 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-packages-data-model-1-point">1. Load packages, data, model (1 point)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#replicating-summary-outputs-5-pts">2. Replicating <code class="docutils literal notranslate"><span class="pre">summary</span></code> outputs (5 pts)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#replicating-summary-outputs-5-pts">2. Replicating <code class="docutils literal notranslate"><span class="pre">summary</span></code> outputs (5 pts)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-use-generative-ai-optional">If you use Generative AI (optional)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-write-pseudocode">Step 1: Write pseudocode</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-generate-code-using-generative-ai">Step 2: Generate code using generative AI</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-compare-and-verify-the-code">Step 3: Compare and verify the code</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-table-and-indexing-4-pts">2. Summary table and indexing (4 pts)</a></li>
 </ul>
             </nav>
@@ -665,6 +678,70 @@ document.write(`
 <p>Where SSE is the sum of squared errors, <code class="docutils literal notranslate"><span class="pre">n</span></code> is the number of observations, and <code class="docutils literal notranslate"><span class="pre">p</span></code> is the number of parameters estimated (hint: this includes the intercept). So the denominator boils down to the degrees of freedom.</p>
 <p>Below, use what you’ve learned about extracting information from model objects to calculate the SSE and extract <code class="docutils literal notranslate"><span class="pre">n</span></code> and <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
 <p>Hint: remember that R is really good at <em>vectorized operations</em>, meaning it easily applies the same operation individually to each element of a given vector.</p>
+<hr class="docutils" />
+<hr class="docutils" />
+<section id="if-you-use-generative-ai-optional">
+<h3>If you use Generative AI (optional)<a class="headerlink" href="#if-you-use-generative-ai-optional" title="Link to this heading">#</a></h3>
+<p>If you use code-assisting generative AI (e.g., Copilot, GPT, Claude; more than simple google searching), follow the steps below. If you <strong>do not</strong> use generative AI, skip this section and go directly to the coding part.</p>
+<p>Your workflow should be</p>
+<ol class="arabic simple">
+<li><p>Write pseudocode</p></li>
+<li><p>Generate code using generative AI</p></li>
+<li><p>Compare and verify the code</p></li>
+</ol>
+<p><strong>Definition</strong>: Pseudocode is a short description of an algorithm written in plain, structured steps that a human (or an AI!) can easily read and translate into real code. Pseudocode usually does not run as. It does not need to be perfect—its purpose is to help you organize your approach and to provide clear instructions to the AI.</p>
+<p>You may write pseudocode as comments (starting with #) inside a code cell or as plain text.</p>
+<section id="step-1-write-pseudocode">
+<h4>Step 1: Write pseudocode<a class="headerlink" href="#step-1-write-pseudocode" title="Link to this heading">#</a></h4>
+<p>Write pseudocode for <code class="docutils literal notranslate"><span class="pre">SSE</span></code>, <code class="docutils literal notranslate"><span class="pre">n</span></code>, and <code class="docutils literal notranslate"><span class="pre">p</span></code> below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write out your pseudo code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-generate-code-using-generative-ai">
+<h4>Step 2: Generate code using generative AI<a class="headerlink" href="#step-2-generate-code-using-generative-ai" title="Link to this heading">#</a></h4>
+<p>Using your pseudocode, prompt a generative AI to create or fix the R functionso it follows the instructions. Then paste <strong>only the generated function</strong> below (not the full AI response).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Paste generated function here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-3-compare-and-verify-the-code">
+<h4>Step 3: Compare and verify the code<a class="headerlink" href="#step-3-compare-and-verify-the-code" title="Link to this heading">#</a></h4>
+<p>Compare your pseudocode and the AI-generated code. Answer the questions below concisely (a few bullet points is enough.)</p>
+<p><strong>Question 1.</strong> What is different between your pseudocode and generated code.
+(e.g., it handled NAs differently, used a different formula arrangement, etc.)</p>
+<p><strong>Question 2.</strong> What are the input parameters and the output of the function?
+(Answer to show you understand what the function takes in and returns. Be concise.)</p>
+<p><strong>Question 3.</strong> Does anything has to be changed? (Yes / No)</p>
+<p>Write your answer here</p>
+<section id="question-1">
+<h5>Question 1.<a class="headerlink" href="#question-1" title="Link to this heading">#</a></h5>
+<ul class="simple">
+<li></li>
+</ul>
+</section>
+<section id="question-2">
+<h5>Question 2.<a class="headerlink" href="#question-2" title="Link to this heading">#</a></h5>
+<ul class="simple">
+<li></li>
+</ul>
+</section>
+<section id="question-3">
+<h5>Question 3.<a class="headerlink" href="#question-3" title="Link to this heading">#</a></h5>
+<ul class="simple">
+<li><p>Yes / No</p></li>
+</ul>
+<p>If you answers yes to the question 3, revise the code (either using GenAI or on your own). Don’t forget to paste your final version in the code block below.</p>
+<hr class="docutils" />
+<hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># INSERT CODE HERE</span>
@@ -689,7 +766,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test and compare results. </span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test and compare results.</span>
 
 <span class="nf">your_function</span><span class="p">(</span><span class="n">cred_lm</span><span class="p">)</span><span class="w"> </span><span class="c1">#Replace with your own function name</span>
 <span class="nf">sigma</span><span class="p">(</span><span class="n">cred_lm</span><span class="p">)</span>
@@ -697,6 +774,9 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
+</section>
+</section>
 </section>
 <hr class="docutils" />
 <section id="summary-table-and-indexing-4-pts">
@@ -816,7 +896,20 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-packages-data-model-1-point">1. Load packages, data, model (1 point)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#replicating-summary-outputs-5-pts">2. Replicating <code class="docutils literal notranslate"><span class="pre">summary</span></code> outputs (5 pts)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#replicating-summary-outputs-5-pts">2. Replicating <code class="docutils literal notranslate"><span class="pre">summary</span></code> outputs (5 pts)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-use-generative-ai-optional">If you use Generative AI (optional)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-write-pseudocode">Step 1: Write pseudocode</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-generate-code-using-generative-ai">Step 2: Generate code using generative AI</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-compare-and-verify-the-code">Step 3: Compare and verify the code</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2.</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-table-and-indexing-4-pts">2. Summary table and indexing (4 pts)</a></li>
 </ul>
   </nav></div>
