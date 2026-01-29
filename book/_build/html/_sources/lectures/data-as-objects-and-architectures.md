@@ -17,7 +17,7 @@
 
 ## Slides (PDF)
 
-[![Data as objects and architectures](../thumbnails/data-as-objects-and-architectures.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/03_data-as-objects-and-architectures.pdf "Data as objects and architectures")
+[![Data as objects and architectures](../thumbnails/data-as-objects-and-architectures.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/05_data-as-objects-and-architectures.pdf "Data as objects and architectures")
 
 
 
