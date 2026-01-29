@@ -12,5 +12,4 @@
 
 ## Slides (PDF)
 
-<!--[![Techniques for data cleansing](../thumbnails/techniques-for-data-cleansing.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/techniques-for-data-cleansing.pdf "Techniques for data cleansing")-->
-### [Slides not yet available]
+[![Techniques for data cleansing](../thumbnails/techniques-for-data-cleansing.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/03_techniques-for-data-cleansing.pdf "Techniques for data cleansing")
