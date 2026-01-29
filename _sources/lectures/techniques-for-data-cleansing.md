@@ -12,4 +12,4 @@
 
 ## Slides (PDF)
 
-[![Techniques for data cleansing](../thumbnails/techniques-for-data-cleansing.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/03_techniques-for-data-cleansing.pdf "Techniques for data cleansing")
+[![Techniques for data cleansing](../thumbnails/techniques-for-data-cleansing.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/06_techniques-for-data-cleansing.pdf "Techniques for data cleansing")
