@@ -14,5 +14,5 @@
 
 ## Slides (PDF)
 
-<!--[![Visualization as analysis](../thumbnails/visualization-as-analysis.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/visualization-as-analysis.pdf "Visualization as analysis")-->
-### [Slides not yet available]
+[![Visualization as analysis](../thumbnails/visualization-as-analysis.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/07_visualization-as-analysis.pdf "Visualization as analysis")
+
