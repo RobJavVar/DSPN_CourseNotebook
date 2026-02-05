@@ -13,5 +13,5 @@
 
 ## Slides (PDF)
 
-<!--[![Telling your data story](../thumbnails/telling-your-data-story.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/telling-your-data-story.pdf "Telling your data story")-->
+<!--[![Telling your data story](../thumbnails/telling-your-data-story.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/telling-your-data-story.pdf "Telling your data story")-->
 ### [Slides not yet available]

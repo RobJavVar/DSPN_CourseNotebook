@@ -12,5 +12,5 @@
 
 ## Slides (PDF)
 
-<!--[![Theories as social constructs](../thumbnails/theories-as-social-constructs.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/theories-as-social-constructs.pdf "Theories as social constructs")-->
+<!--[![Theories as social constructs](../thumbnails/theories-as-social-constructs.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/theories-as-social-constructs.pdf "Theories as social constructs")-->
 ### [Slides not yet available]

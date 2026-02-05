@@ -12,5 +12,5 @@
 
 ## Slides (PDF)
 
-<!--[![Limits and variations of linear regression](../thumbnails/limits-and-variations-of-linear-regression.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/limits-of-linear-regression.pdf "Limits and variations of linear regression")-->
+<!--[![Limits and variations of linear regression](../thumbnails/limits-and-variations-of-linear-regression.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/limits-of-linear-regression.pdf "Limits and variations of linear regression")-->
 ### [Video not yet available]

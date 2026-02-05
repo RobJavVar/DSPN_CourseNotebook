@@ -13,5 +13,5 @@
 
 ## Slides (PDF)
 
-<!--[![Mediation and moderation](../thumbnails/mediation-and-moderation.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/mediation-and-moderation.pdf "Mediation and moderation")-->
+<!--[![Mediation and moderation](../thumbnails/mediation-and-moderation.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/mediation-and-moderation.pdf "Mediation and moderation")-->
 ### [Video not yet available]

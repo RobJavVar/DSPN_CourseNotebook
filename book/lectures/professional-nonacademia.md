@@ -12,5 +12,5 @@
 
 ## Slides (PDF)
 
-<!--[![Professional Landscape Outside Academia](../thumbnails/professional-nonacademia.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/bayes-factor.pdf "Professional Landscape Outside Academia")-->
+<!--[![Professional Landscape Outside Academia](../thumbnails/professional-nonacademia.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/bayes-factor.pdf "Professional Landscape Outside Academia")-->
 ### [Slides not yet available]

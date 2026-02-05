@@ -12,5 +12,5 @@
 
 ## Slides (PDF)
 
-<!--[![Power analysis via simulations](../thumbnails/power-analysis-via-simulations.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/power-analysis-via-simulations.pdf "Power analysis via simulations")-->
+<!--[![Power analysis via simulations](../thumbnails/power-analysis-via-simulations.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/power-analysis-via-simulations.pdf "Power analysis via simulations")-->
 ### [Slides not yet available]

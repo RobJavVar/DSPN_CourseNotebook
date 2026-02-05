@@ -12,5 +12,5 @@
 
 ## Slides (PDF)
 
-<!--[![Classifiers](../thumbnails/classifiers.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/classifiers.pdf "Classifiers")-->
+<!--[![Classifiers](../thumbnails/classifiers.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/classifiers.pdf "Classifiers")-->
 ### [Slides not yet available]

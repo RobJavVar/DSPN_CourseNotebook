@@ -13,5 +13,5 @@
 
 ## Slides (PDF)
 
-<!--[![Resampling methods](../thumbnails/resampling-methods.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/resampling-methods.pdf "Resampling methods")-->
+<!--[![Resampling methods](../thumbnails/resampling-methods.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/resampling-methods.pdf "Resampling methods")-->
 ### [Slides not yet available]
