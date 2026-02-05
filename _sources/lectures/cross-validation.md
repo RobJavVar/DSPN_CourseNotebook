@@ -13,5 +13,5 @@
 
 ## Slides (PDF)
 
-<!--[![Cross validation](../thumbnails/cross-validation.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/cross-validation.pdf "Cross validation")-->
+<!--[![Cross validation](../thumbnails/cross-validation.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/cross-validation.pdf "Cross validation")-->
 ### [Slides not yet available]

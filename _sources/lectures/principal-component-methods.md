@@ -13,5 +13,5 @@
 
 ## Slides (PDF)
 
-<!--[![Principal component methods](../thumbnails/principal-component-methods.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/principal-component-methods.pdf "Principal component methods")-->
+<!--[![Principal component methods](../thumbnails/principal-component-methods.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/principal-component-methods.pdf "Principal component methods")-->
 ### [Slides not yet available]

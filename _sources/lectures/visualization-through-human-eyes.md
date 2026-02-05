@@ -12,5 +12,4 @@
 
 ## Slides (PDF)
 
-<!--[![Visualization through human eyes](../thumbnails/visualization-through-human-eyes.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/visualization-through-human-eyes.pdf "Visualization through human eyes")-->
-### [Slides not yet available]
+[![Visualization through human eyes](../thumbnails/visualization-through-human-eyes.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/08_visualization-through-human-eyes.pdf "Visualization through human eyes")

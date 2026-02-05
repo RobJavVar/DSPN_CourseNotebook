@@ -14,5 +14,5 @@
 
 ## Slides (PDF)
 
-<!--[![The beauty of kNN](../thumbnails/the-beauty-of-knn.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/the-beauty-of-kNN.pdf "The beauty of kNN")-->
+<!--[![The beauty of kNN](../thumbnails/the-beauty-of-knn.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/the-beauty-of-kNN.pdf "The beauty of kNN")-->
 ### [Slides not yet available]

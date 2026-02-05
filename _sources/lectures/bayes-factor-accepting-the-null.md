@@ -12,5 +12,5 @@
 
 ## Slides (PDF)
 
-<!--[![Bayes factor](../thumbnails/bayes-factor.jpeg)](https://github.com/CoAxLab/Data-Explorations/blob/main/book/slides/bayes-factor.pdf "Bayes factor")-->
+<!--[![Bayes factor](../thumbnails/bayes-factor.jpeg)](httpshttps://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/bayes-factor.pdf "Bayes factor")-->
 ### [Slides not yet available]
