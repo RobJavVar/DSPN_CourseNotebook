@@ -14,5 +14,4 @@
 
 ## Slides (PDF)
 
-<!--[![The bias-variance tradeoff](../thumbnails/bias-variance-tradeoff.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/bias-variance-tradeoff.pdf "The bias-variance tradeoff")-->
-### [Slides not yet available]
+[![The bias-variance tradeoff](../thumbnails/bias-variance-tradeoff.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/09_bias-variance-tradeoff.pdf "The bias-variance tradeoff")
