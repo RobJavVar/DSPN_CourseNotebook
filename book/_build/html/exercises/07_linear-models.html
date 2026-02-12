@@ -601,7 +601,15 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data-1-point">1. Loading the Data (1 point)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-data-visualization-2-point">2. Initial data visualization (2 point)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-4-points">3. Linear regression (4 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-4-points">3. Linear regression (4 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-use-generative-ai-optional">If you use Generative AI (optional)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-write-pseudocode">Step 1: Write pseudocode</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-generate-code-using-generative-ai">Step 2: Generate code using generative AI</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-compare-and-verify-the-code">Step 3: Compare and verify the code</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-2-points">4. Plotting (2 points)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-1-point">5. Reflection (1 point)</a></li>
 </ul>
@@ -628,9 +636,9 @@ document.write(`
 <p>Use the <code class="docutils literal notranslate"><span class="pre">head</span></code> function to look at the first few rows of each data frame.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># If you are running this on your local computer, wet your workign directory to </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># If you are running this on your local computer, wet your workign directory to</span>
 <span class="c1"># the location of the lexDat data by setting your harddrive. Uncomment this line</span>
-<span class="c1"># and change the location to where it is on your computer. </span>
+<span class="c1"># and change the location to where it is on your computer.</span>
 <span class="c1">#setwd(&quot;~/Documents/PittCMU/G3/DSPN/DataSciencePsychNeuro/Homeworks/hcp_data&quot;)</span>
 
 <span class="c1"># If you are running this on Colab, then use something like this.</span>
@@ -666,6 +674,55 @@ document.write(`
 Y_{flanker} = \beta_0 + \beta_1 X_{GM volume}
 \]</div>
 <p>Show the results using the <code class="docutils literal notranslate"><span class="pre">summary</span></code> function, and report the mean coefficient values for <span class="math notranslate nohighlight">\(beta_0\)</span> &amp; <span class="math notranslate nohighlight">\(\beta_1\)</span> (<code class="docutils literal notranslate"><span class="pre">coef</span></code> function) and their 95% confidence intervals (<code class="docutils literal notranslate"><span class="pre">confint</span></code> function). Is grey matter volume significantly associated with Flanker Task performance?</p>
+<hr class="docutils" />
+<hr class="docutils" />
+<section id="if-you-use-generative-ai-optional">
+<h3>If you use Generative AI (optional)<a class="headerlink" href="#if-you-use-generative-ai-optional" title="Link to this heading">#</a></h3>
+<p>If you use code-assisting generative AI (e.g., Copilot, GPT, Claude; more than simple google searching), follow the steps below. If you do not use generative AI, skip this section and go directly to the coding part.</p>
+<section id="step-1-write-pseudocode">
+<h4>Step 1: Write pseudocode<a class="headerlink" href="#step-1-write-pseudocode" title="Link to this heading">#</a></h4>
+<p>Write pseudocode for <code class="docutils literal notranslate"><span class="pre">lm</span></code> model (or any other variables you have to print) below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write out your pseudo code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-generate-code-using-generative-ai">
+<h4>Step 2: Generate code using generative AI<a class="headerlink" href="#step-2-generate-code-using-generative-ai" title="Link to this heading">#</a></h4>
+<p>Using your pseudocode, prompt a generative AI to create or fix the R function. Then paste <strong>only the generated function</strong> below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Paste generated function here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-3-compare-and-verify-the-code">
+<h4>Step 3: Compare and verify the code<a class="headerlink" href="#step-3-compare-and-verify-the-code" title="Link to this heading">#</a></h4>
+<p><strong>Question 1.</strong> What is different between your pseudocode and generated code.
+(e.g., it handled NAs differently, used a different formula arrangement, etc.)</p>
+<p><strong>Question 2.</strong> What are the input parameters and the output of the function?
+(Answer to show you understand what the function takes in and returns. Be concise.)</p>
+<p><strong>Question 3.</strong> Does anything has to be changed? (Yes / No)</p>
+<blockquote>
+<div><p><em>Write your response here.</em></p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Q1.</strong></p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Q2.</strong></p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Q3.</strong> Yes / No</p>
+</div></blockquote>
+<p>If you answers yes to the question 3, revise the code. Don’t forget to paste your final version in the code block below.</p>
+<hr class="docutils" />
+<hr class="docutils" />
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#INSERT CODE HERE</span>
@@ -676,6 +733,8 @@ Y_{flanker} = \beta_0 + \beta_1 X_{GM volume}
 <blockquote>
 <div><p><em>Write your response here.</em></p>
 </div></blockquote>
+</section>
+</section>
 </section>
 <hr class="docutils" />
 <section id="plotting-2-points">
@@ -699,7 +758,7 @@ Y_{flanker} = \beta_0 + \beta_1 X_{GM volume}
 <blockquote>
 <div><p><em>Write your response here.</em></p>
 </div></blockquote>
-<p><strong>DUE:</strong> 5pm EST, Feb 19, 2026</p>
+<p><strong>DUE:</strong> 11:59pm EST, Feb 19, 2026</p>
 <p><strong>IMPORTANT</strong> Did you collaborate with anyone on this assignment? If so, list their names here.</p>
 <blockquote>
 <div><p><em>Someone’s Name</em></p>
@@ -773,7 +832,15 @@ Y_{flanker} = \beta_0 + \beta_1 X_{GM volume}
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-data-1-point">1. Loading the Data (1 point)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-data-visualization-2-point">2. Initial data visualization (2 point)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-4-points">3. Linear regression (4 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-4-points">3. Linear regression (4 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-use-generative-ai-optional">If you use Generative AI (optional)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-write-pseudocode">Step 1: Write pseudocode</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-generate-code-using-generative-ai">Step 2: Generate code using generative AI</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-compare-and-verify-the-code">Step 3: Compare and verify the code</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-2-points">4. Plotting (2 points)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-1-point">5. Reflection (1 point)</a></li>
 </ul>

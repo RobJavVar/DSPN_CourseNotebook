@@ -12,5 +12,4 @@
 
 ## Slides (PDF)
 
-<!--[![Linear models](../thumbnails/linear-models.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/linear-models.pdf "Linear models")-->
-### [Slides not yet available]
+[![Linear models](../thumbnails/linear-models.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/10_linear-models.pdf "Linear models")
