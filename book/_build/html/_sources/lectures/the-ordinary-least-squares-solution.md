@@ -12,5 +12,4 @@
 
 ## Slides (PDF)
 
-<!--[![The ordinary least squares solution](../thumbnails/the-ordinary-least-squares-solution.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/ordinary-least-squares-solution.pdf "The ordinary least squares solution")-->
-### [Slides not yet available]
+[![The ordinary least squares solution](../thumbnails/the-ordinary-least-squares-solution.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/11_ordinary-least-squares-solution.pdf "The ordinary least squares solution")
