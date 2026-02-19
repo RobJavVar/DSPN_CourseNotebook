@@ -1,5 +1,5 @@
 # Discussion questions
 
-1. Someone shows you a model that predicts exam scores extremely accurately (very high 𝑅-Square) What could you see in the model (e.g., the variables, predictions, or behavior) that would make you skeptical of it? Could a model be very accurate but still misleading?
+1. We have gone over three different model evaluation metrics: RSE, $r^2$, & F-test. In what contexts would each method be preferred over the others? Provide one example for all three metrics.
 
-2. When we fit a regression line, do you think we are uncovering a real relationship in nature, or just building a convenient summary of patterns in our dataset? Would your answer change in psychology vs neuroscience vs economics?
+2. OLS chooses parameters that minimize squared error. Maximum likelihood chooses parameters that make the observed data most probable. Why do these two completely different ideas give the same answer in linear regression? What assumption about reality must be hiding underneath?
