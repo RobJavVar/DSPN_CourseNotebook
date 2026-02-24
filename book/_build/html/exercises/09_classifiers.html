@@ -595,11 +595,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-and-formatting-the-data-1-point">1. Loading and formatting the data (1 point)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-and-formatting-the-data-2-point">1. Loading and formatting the data (2 point)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-the-data-1-point">2. Visualizing the data (1 point)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistic-regression-fitting-the-model-2-points">3. Logistic Regression: Fitting the model (2 points)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-predictions-from-the-model-3-points">4. Interpreting predictions from the model (3 points)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qda-3-points">5. QDA (3 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistic-regression-fitting-the-model-3-points">3. Logistic Regression: Fitting the model (3 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-predictions-from-the-model-4-points">4. Interpreting predictions from the model (4 points)</a></li>
 </ul>
             </nav>
         </div>
@@ -618,8 +617,8 @@ document.write(`
 <p>This data is a subset of the <a class="reference external" href="https://elexicon.wustl.edu/">English Lexicon Project database</a>. It provides response correctness and reaction times (in milliseconds) of many subjects as they are presented with letter strings and asked to decide, as quickly and as accurately as possible, whether the letter string is a word or not. The <strong>Items.csv</strong> provides characteristics of the words used, namely frequency (how common is this word?) and length (how many letters?).</p>
 <p><em>Data courtesy of Balota, D.A., Yap, M.J., Cortese, M.J., Hutchison, K.A., Kessler, B., Loftis, B., Neely, J.H., Nelson, D.L., Simpson, G.B., &amp; Treiman, R. (2007). The English Lexicon Project. Behavior Research Methods, 39, 445-459.</em></p>
 <hr class="docutils" />
-<section id="loading-and-formatting-the-data-1-point">
-<h2>1. Loading and formatting the data (1 point)<a class="headerlink" href="#loading-and-formatting-the-data-1-point" title="Link to this heading">#</a></h2>
+<section id="loading-and-formatting-the-data-2-point">
+<h2>1. Loading and formatting the data (2 point)<a class="headerlink" href="#loading-and-formatting-the-data-2-point" title="Link to this heading">#</a></h2>
 <p>Load in data from the <strong>LexicalData_withIncorrect.csv</strong> and <strong>Items.csv</strong> files. Use <code class="docutils literal notranslate"><span class="pre">left_join</span></code> to add word characteristics <code class="docutils literal notranslate"><span class="pre">Length</span></code> and <code class="docutils literal notranslate"><span class="pre">Log_Freq_Hal</span></code> from <strong>Items</strong> to the <strong>LexicalData</strong>, and use <code class="docutils literal notranslate"><span class="pre">drop_na()</span></code> to get rid of any observations with missing values. Then use <code class="docutils literal notranslate"><span class="pre">head()</span></code> to look at the first few rows of the data.</p>
 <p><em>Note: We’re just working with <code class="docutils literal notranslate"><span class="pre">Correct</span></code> in this homework, so no need to worry about reformatting reaction times.</em></p>
 <div class="cell docutils container">
@@ -637,10 +636,10 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vrequire</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span> <span class="c1"># Load the tidyverse package, if you haven&#39;t yet</span>
-<span class="n">fdata</span><span class="err">$</span><span class="n">Correct</span> <span class="o">&lt;-</span> <span class="k">as</span><span class="o">.</span><span class="n">factor</span><span class="p">(</span><span class="n">fdata</span><span class="err">$</span><span class="n">Correct</span><span class="p">)</span> <span class="c1"># so that R knows that Correct is categorical, not numeric. </span>
+<span class="n">fdata</span><span class="err">$</span><span class="n">Correct</span> <span class="o">&lt;-</span> <span class="k">as</span><span class="o">.</span><span class="n">factor</span><span class="p">(</span><span class="n">fdata</span><span class="err">$</span><span class="n">Correct</span><span class="p">)</span> <span class="c1"># so that R knows that Correct is categorical, not numeric.</span>
 
 <span class="c1"># plot the Correct / Incorrect clusters</span>
-<span class="n">ggplot</span><span class="p">(</span><span class="n">fdata</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">Log_Freq_HAL</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">y</span><span class="o">=</span><span class="n">Length</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="n">Correct</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s2">&quot;jitter&quot;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span> <span class="n">theme_light</span><span class="p">()</span> 
+<span class="n">ggplot</span><span class="p">(</span><span class="n">fdata</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">Log_Freq_HAL</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">y</span><span class="o">=</span><span class="n">Length</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="n">Correct</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s2">&quot;jitter&quot;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span> <span class="n">theme_light</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -651,8 +650,8 @@ document.write(`
 </div></blockquote>
 </section>
 <hr class="docutils" />
-<section id="logistic-regression-fitting-the-model-2-points">
-<h2>3. Logistic Regression: Fitting the model (2 points)<a class="headerlink" href="#logistic-regression-fitting-the-model-2-points" title="Link to this heading">#</a></h2>
+<section id="logistic-regression-fitting-the-model-3-points">
+<h2>3. Logistic Regression: Fitting the model (3 points)<a class="headerlink" href="#logistic-regression-fitting-the-model-3-points" title="Link to this heading">#</a></h2>
 <p>Fit a logistic regression model to the data using <code class="docutils literal notranslate"><span class="pre">Length</span></code>, <code class="docutils literal notranslate"><span class="pre">Log_Freq_HAL</span></code>, and their interaction to predict <code class="docutils literal notranslate"><span class="pre">Correct</span></code>. Use <code class="docutils literal notranslate"><span class="pre">glm()</span></code> to fit the model, and look at its output using <code class="docutils literal notranslate"><span class="pre">summary()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -667,8 +666,8 @@ document.write(`
 </div></blockquote>
 </section>
 <hr class="docutils" />
-<section id="interpreting-predictions-from-the-model-3-points">
-<h2>4. Interpreting predictions from the model (3 points)<a class="headerlink" href="#interpreting-predictions-from-the-model-3-points" title="Link to this heading">#</a></h2>
+<section id="interpreting-predictions-from-the-model-4-points">
+<h2>4. Interpreting predictions from the model (4 points)<a class="headerlink" href="#interpreting-predictions-from-the-model-4-points" title="Link to this heading">#</a></h2>
 <p>Finally, look at how well this logistic regression model does at predicting correctness. Use <code class="docutils literal notranslate"><span class="pre">predict()</span></code> and a threshold of 0.5 to generate predicted <code class="docutils literal notranslate"><span class="pre">Correct</span></code> values for each trial, then output a confusion matrix and overall accuracy for these predictions.</p>
 <p><em>Hint: see the Classifiers tutorial.</em></p>
 <div class="cell docutils container">
@@ -682,35 +681,12 @@ document.write(`
 <blockquote>
 <div><p><em>Write your response here</em></p>
 </div></blockquote>
-</section>
-<section id="qda-3-points">
-<h2>5. QDA (3 points)<a class="headerlink" href="#qda-3-points" title="Link to this heading">#</a></h2>
-<p>Load in the <code class="docutils literal notranslate"><span class="pre">MASS</span></code> library and fit a QDA model to the data set. The predictors are still <code class="docutils literal notranslate"><span class="pre">Length</span></code>, <code class="docutils literal notranslate"><span class="pre">Log_Freq_HAL</span></code>, and their interaction, just like the logistic regression model you just ran, and the dependent variable is still <code class="docutils literal notranslate"><span class="pre">Correct</span></code>.</p>
-<p><em>Hint: see the Classifiers tutorial.</em></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># WRITE YOUR CODE HERE</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now look at how well the predicted <code class="docutils literal notranslate"><span class="pre">Correct</span></code> values compare with actual <code class="docutils literal notranslate"><span class="pre">Correct</span></code> values for the whole data set. Output a confusion matrix and overall prediction accuracy.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># WRITE YOUR CODE HERE</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>How does QDA prediction performance differ from that of logistic regression?</p>
-<blockquote>
-<div><p><em>Write your response here</em></p>
-</div></blockquote>
-<p><strong>DUE:</strong> 5pm EST, March 3, 2026</p>
+<p><strong>DUE:</strong> 11:59pm EST, March 3, 2026</p>
 <p><strong>IMPORTANT</strong> Did you collaborate with anyone on this assignment? If so, list their names here.</p>
 <blockquote>
 <div><p><em>Someone’s Name</em></p>
 </div></blockquote>
+<p><strong>GenAI Utilization</strong> Did you utilize any generative AI tools on this assignment? If so, please list the item and the paste respective prompt you used.</p>
 </section>
 </section>
 
@@ -778,11 +754,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-and-formatting-the-data-1-point">1. Loading and formatting the data (1 point)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-and-formatting-the-data-2-point">1. Loading and formatting the data (2 point)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-the-data-1-point">2. Visualizing the data (1 point)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistic-regression-fitting-the-model-2-points">3. Logistic Regression: Fitting the model (2 points)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-predictions-from-the-model-3-points">4. Interpreting predictions from the model (3 points)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qda-3-points">5. QDA (3 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logistic-regression-fitting-the-model-3-points">3. Logistic Regression: Fitting the model (3 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-predictions-from-the-model-4-points">4. Interpreting predictions from the model (4 points)</a></li>
 </ul>
   </nav></div>
 
