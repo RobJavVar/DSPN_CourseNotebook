@@ -292,8 +292,6 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../lectures/classifiers.html">Classifiers</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Tutorial: Basics classifiers</a></li>
 
-
-
 <li class="toctree-l2"><a class="reference internal" href="../discussions/classifiers.html">Discussion questions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../exercises/09_classifiers.html">Exercise 9: Classification</a></li>
 </ul>
@@ -607,8 +605,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predicting-the-stock-market">Predicting the stock market</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lda">LDA</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#qda">QDA</a></li>
 </ul>
 
             </nav>
@@ -994,192 +990,8 @@ predicted Down  Up
 </div>
 </div>
 <p>So this isn’t too bad. We can predict slightly above chance the 2005 performance from a model trained on the previous years.</p>
+<p><em>Notebook authored by Ven Popov and edited by Roberto Vargas, Krista Bond, Charles Wu, Patience Stevens, and Amy Sentis.</em></p>
 </section>
-</section>
-<hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="lda">
-<h1>LDA<a class="headerlink" href="#lda" title="Link to this heading">#</a></h1>
-<p>Let’s now move on to using LDA. The <code class="docutils literal notranslate"><span class="pre">lda</span></code> function is built into the MASS library that we have used previously. We’ll use that one here (although there are other LDA libraries that you can install if you’d like).</p>
-<p>First let’s replicate our prediction problem using the stock market data.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">MASS</span><span class="p">)</span>
-
-<span class="c1"># LDA syntax is just like for linear regression fitting </span>
-<span class="c1"># Let&#39;s conduct LDA on the training subset now</span>
-<span class="n">lda.fit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">lda</span><span class="p">(</span><span class="n">Direction</span><span class="o">~</span><span class="n">Lag1</span><span class="o">+</span><span class="n">Lag2</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">Smarket</span><span class="p">,</span><span class="w"> </span><span class="n">subset</span><span class="o">=</span><span class="n">train_idx</span><span class="p">)</span>
-<span class="n">lda.fit</span><span class="w"> </span><span class="c1"># The summary() function gives you something different</span>
-<span class="nf">plot</span><span class="p">(</span><span class="n">lda.fit</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
-lda(Direction ~ Lag1 + Lag2, data = Smarket, subset = train_idx)
-
-Prior probabilities of groups:
-    Down       Up 
-0.491984 0.508016 
-
-Group means:
-            Lag1        Lag2
-Down  0.04279022  0.03389409
-Up   -0.03954635 -0.03132544
-
-Coefficients of linear discriminants:
-            LD1
-Lag1 -0.6420190
-Lag2 -0.5135293
-</pre></div>
-</div>
-<a class="reference internal image-reference" href="../_images/be7879070fb361bd741f78dab15dfca020e8fcf7781865334694698eae5e449f.png"><img alt="../_images/be7879070fb361bd741f78dab15dfca020e8fcf7781865334694698eae5e449f.png" src="../_images/be7879070fb361bd741f78dab15dfca020e8fcf7781865334694698eae5e449f.png" style="width: 420px; height: 420px;" />
-</a>
-</div>
-</div>
-<p>This indicates that 49.2% of the training observations correspond to days during which the market went down.</p>
-<p>The coefficients of linear discriminants indicate the distance of each value from
-the discrimination boundary.</p>
-<ol class="arabic simple">
-<li><p>If <span class="math notranslate nohighlight">\(w_1*x_{Lag1} - w_2*x_{Lag2}\)</span> is positive, then the classifier predicts the market will increase</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(w_1*x_{Lag1} - w_2*x_{Lag2}\)</span> is negative, then the classifier predicts the market will decrease</p></li>
-</ol>
-<p>Now let’s use LDA to predict the market values in 2005. LDA determines the group assignment by assigning above and below the 50% (0.5) posterior probabiltiy. In otherwords if the posterior probability is &gt;=0.5, then it assigns one value, otherwise it assigns the other.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Predict from your LDA coefficients</span>
-<span class="n">lda.pred</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">predict</span><span class="p">(</span><span class="n">lda.fit</span><span class="p">,</span><span class="w"> </span><span class="n">Smarket.2005_test</span><span class="p">)</span>
-
-<span class="c1"># We next extract the output of the prediction </span>
-<span class="n">lda.class</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lda.pred</span><span class="o">$</span><span class="n">class</span>
-<span class="nf">table</span><span class="p">(</span><span class="n">lda.class</span><span class="p">,</span><span class="w"> </span><span class="n">Direction.2005_test</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">&quot;Accuracy:&quot;</span><span class="p">,</span><span class="nf">mean</span><span class="p">(</span><span class="n">lda.class</span><span class="o">==</span><span class="n">Direction.2005_test</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>         Direction.2005_test
-lda.class Down  Up
-     Down   35  35
-     Up     76 106
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;Accuracy: 0.55952380952381&quot;
-</pre></div>
-</div>
-</div>
-</div>
-<p>So we now see that the LDA is performing just as well as the logistic regression at ~56% test set accuracy.</p>
-<p>Another way to evaluate the LDA is by looking at the posterior probability from the model. This is analogous (although not identical) to <span class="math notranslate nohighlight">\(\hat{y}\)</span>, our estimate of the probability of being “Up”, in the logistic regression example.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">lda.pred</span><span class="o">$</span><span class="n">posterior</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table>
-<caption>A matrix: 6 × 2 of type dbl</caption>
-<thead>
-	<tr><th></th><th scope=col>Down</th><th scope=col>Up</th></tr>
-</thead>
-<tbody>
-	<tr><th scope=row>999</th><td>0.4901792</td><td>0.5098208</td></tr>
-	<tr><th scope=row>1000</th><td>0.4792185</td><td>0.5207815</td></tr>
-	<tr><th scope=row>1001</th><td>0.4668185</td><td>0.5331815</td></tr>
-	<tr><th scope=row>1002</th><td>0.4740011</td><td>0.5259989</td></tr>
-	<tr><th scope=row>1003</th><td>0.4927877</td><td>0.5072123</td></tr>
-	<tr><th scope=row>1004</th><td>0.4938562</td><td>0.5061438</td></tr>
-</tbody>
-</table>
-</div></div>
-</div>
-<p>Sometimes it is more informative to look at the relationship between a predictor variable and the posterior, rather than a predictor variable and the predicted classification. It helps you distinguish between, for example, observations that are <em>very</em> likely to be “Down” and observations that are only somewhat likely to be “Down”.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show the relationship between the Lag 1 variable </span>
-<span class="c1"># and the posterior probability from LDA</span>
-
-<span class="n">lag1_posterior_df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">Smarket.2005_test</span><span class="o">$</span><span class="n">Lag1</span><span class="p">,</span><span class="w"> </span><span class="n">lda.pred</span><span class="o">$</span><span class="n">posterior</span><span class="p">[,</span><span class="m">1</span><span class="p">])</span>
-<span class="nf">colnames</span><span class="p">(</span><span class="n">lag1_posterior_df</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;lag1_return&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;down_posterior_prob&#39;</span><span class="p">)</span>
-
-<span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">lag1_posterior_df</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">lag1_return</span><span class="p">,</span><span class="w"> </span><span class="n">down_posterior_prob</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">xlab</span><span class="p">(</span><span class="s">&#39;Return from one day ago&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&#39;Posterior probability of the stock going down&#39;</span><span class="p">)</span>
-<span class="c1">#getting the lag 1 percentage return &amp; the posterior prob. of the stock going down</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/539989a3220dc40d5970aba1208628c2edeb5a8e6a91111ef4fb0152af67adaa.png"><img alt="../_images/539989a3220dc40d5970aba1208628c2edeb5a8e6a91111ef4fb0152af67adaa.png" src="../_images/539989a3220dc40d5970aba1208628c2edeb5a8e6a91111ef4fb0152af67adaa.png" style="width: 420px; height: 420px;" />
-</a>
-</div>
-</div>
-</section>
-<hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="qda">
-<h1>QDA<a class="headerlink" href="#qda" title="Link to this heading">#</a></h1>
-<p>Remember that QDA is a special case of LDA where you do not assume that the underlying distributions have equal variances. So let’s use QDA for the same problem we have been working on so far. First off, let’s check how the distributions of <code class="docutils literal notranslate"><span class="pre">Lag1</span></code> and <code class="docutils literal notranslate"><span class="pre">Lag2</span></code> look in the case of <code class="docutils literal notranslate"><span class="pre">Direction=&quot;Up&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">Direction=&quot;Down&quot;</span></code>. This will help us think about whether QDA might be a better tool than LDA for our question.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">Smarket</span><span class="p">[</span><span class="n">train_idx</span><span class="p">,],</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Lag1</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Lag2</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">facet_grid</span><span class="p">(</span><span class="n">.</span><span class="o">~</span><span class="n">Direction</span><span class="p">)</span>
-
-<span class="nf">print</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">&quot;Covariance of Lag1, Lag2 for Up observations:&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nf">cov</span><span class="p">(</span><span class="n">Smarket</span><span class="o">$</span><span class="n">Lag1</span><span class="p">[</span><span class="n">train_idx</span><span class="p">][</span><span class="nf">which</span><span class="p">(</span><span class="n">Smarket</span><span class="o">$</span><span class="n">Direction</span><span class="p">[</span><span class="n">train_idx</span><span class="p">]</span><span class="o">==</span><span class="s">&quot;Up&quot;</span><span class="p">)],</span><span class="n">Smarket</span><span class="o">$</span><span class="n">Lag2</span><span class="p">[</span><span class="n">train_idx</span><span class="p">][</span><span class="nf">which</span><span class="p">(</span><span class="n">Smarket</span><span class="o">$</span><span class="n">Direction</span><span class="p">[</span><span class="n">train_idx</span><span class="p">]</span><span class="o">==</span><span class="s">&quot;Up&quot;</span><span class="p">)])))</span>
-<span class="nf">print</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">&quot;Covariance of Lag1, Lag2 for Down observations:&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nf">cov</span><span class="p">(</span><span class="n">Smarket</span><span class="o">$</span><span class="n">Lag1</span><span class="p">[</span><span class="n">train_idx</span><span class="p">][</span><span class="nf">which</span><span class="p">(</span><span class="n">Smarket</span><span class="o">$</span><span class="n">Direction</span><span class="p">[</span><span class="n">train_idx</span><span class="p">]</span><span class="o">==</span><span class="s">&quot;Down&quot;</span><span class="p">)],</span><span class="n">Smarket</span><span class="o">$</span><span class="n">Lag2</span><span class="p">[</span><span class="n">train_idx</span><span class="p">][</span><span class="nf">which</span><span class="p">(</span><span class="n">Smarket</span><span class="o">$</span><span class="n">Direction</span><span class="p">[</span><span class="n">train_idx</span><span class="p">]</span><span class="o">==</span><span class="s">&quot;Down&quot;</span><span class="p">)])))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;Covariance of Lag1, Lag2 for Up observations: -0.0278734923872115&quot;
-[1] &quot;Covariance of Lag1, Lag2 for Down observations: -0.0392480610374496&quot;
-</pre></div>
-</div>
-<a class="reference internal image-reference" href="../_images/e9059bec816cdd79fd775ccebe987997ffb0b30effa2c338aeecf0bf6f50eaa4.png"><img alt="../_images/e9059bec816cdd79fd775ccebe987997ffb0b30effa2c338aeecf0bf6f50eaa4.png" src="../_images/e9059bec816cdd79fd775ccebe987997ffb0b30effa2c338aeecf0bf6f50eaa4.png" style="width: 420px; height: 420px;" />
-</a>
-</div>
-</div>
-<p>There is definitely a fair amount of overlap in these distribution (which helps us understand why all our classifiers have low accuracy: the means of the two distributions, <span class="math notranslate nohighlight">\(\mu_{1}\)</span> and <span class="math notranslate nohighlight">\(\mu_{2}\)</span>, are very close). However, the main advantage of QDA is allowing for differences in <em>variance</em> of the two distributions. Looking at the clusters and statistics above, the “Down” observations might have a slightly more negative covariance than the “Up” observations. Note that since there are only two predictor variables here, <code class="docutils literal notranslate"><span class="pre">Lag1</span></code> and <code class="docutils literal notranslate"><span class="pre">Lag2</span></code>, covariance is a single value instead of a matrix (like <span class="math notranslate nohighlight">\(\Sigma_k\)</span> described in Chapter 4 of the James et al., 2013 text).</p>
-<p>Now that there’s a possibility QDA could help, let’s try it:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># QDA is also part of the MASS library</span>
-<span class="n">qda.fit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">qda</span><span class="p">(</span><span class="n">Direction</span><span class="o">~</span><span class="n">Lag1</span><span class="o">+</span><span class="n">Lag2</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">Smarket</span><span class="p">,</span><span class="w"> </span><span class="n">subset</span><span class="o">=</span><span class="n">train_idx</span><span class="p">)</span>
-<span class="n">qda.fit</span>
-
-<span class="c1"># Same basic predictions as LDA, just assuming that each distribution has its own variance. </span>
-<span class="c1"># But we work with coefficients the same way.</span>
-<span class="n">qda.class</span><span class="o">=</span><span class="nf">predict</span><span class="p">(</span><span class="n">qda.fit</span><span class="p">,</span><span class="w"> </span><span class="n">Smarket.2005_test</span><span class="p">)</span><span class="o">$</span><span class="n">class</span>
-<span class="nf">table</span><span class="p">(</span><span class="n">qda.class</span><span class="p">,</span><span class="w"> </span><span class="n">Direction.2005_test</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">&quot;Accuracy:&quot;</span><span class="p">,</span><span class="nf">mean</span><span class="p">(</span><span class="n">qda.class</span><span class="o">==</span><span class="n">Direction.2005_test</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
-qda(Direction ~ Lag1 + Lag2, data = Smarket, subset = train_idx)
-
-Prior probabilities of groups:
-    Down       Up 
-0.491984 0.508016 
-
-Group means:
-            Lag1        Lag2
-Down  0.04279022  0.03389409
-Up   -0.03954635 -0.03132544
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>         Direction.2005_test
-qda.class Down  Up
-     Down   30  20
-     Up     81 121
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;Accuracy: 0.599206349206349&quot;
-</pre></div>
-</div>
-</div>
-</div>
-<p>Notice that QDA is doing slightly better than LDA, with a test accuracy of 60%.</p>
-<p><em>Notebook authored by Ven Popov and edited by Krista Bond, Charles Wu, Patience Stevens, and Amy Sentis.</em></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1254,8 +1066,6 @@ qda.class Down  Up
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predicting-the-stock-market">Predicting the stock market</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lda">LDA</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#qda">QDA</a></li>
 </ul>
 
   </nav></div>
