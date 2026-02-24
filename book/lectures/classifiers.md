@@ -12,5 +12,4 @@
 
 ## Slides (PDF)
 
-<!--[![Classifiers](../thumbnails/classifiers.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/classifiers.pdf "Classifiers")-->
-### [Slides not yet available]
+[![Classifiers](../thumbnails/classifiers.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/13_classifiers.pdf "Classifiers")
