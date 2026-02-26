@@ -14,5 +14,4 @@
 
 ## Slides (PDF)
 
-<!--[![Mixed effects models](../thumbnails/mixed-effects-models.jpeg)](hhttps://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/mixed-effects-models.pdf "Mixed effects models")-->
-### [Slides not yet available]
+[![Mixed effects models](../thumbnails/mixed-effects-models.jpeg)](hhttps://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/14_mixed-effects-models.pdf "Mixed effects models")
