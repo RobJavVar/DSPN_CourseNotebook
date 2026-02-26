@@ -57,8 +57,6 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'discussions/mixed-effects-models';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -553,9 +551,15 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="discussion-questions">
 <h1>Discussion questions<a class="headerlink" href="#discussion-questions" title="Link to this heading">#</a></h1>
 <ol class="arabic simple">
-<li><p>Estimating random effects in a mixed effects model involves estimating the variance of the random distribution that generated the random effects (i.e., <span class="math notranslate nohighlight">\(\eta \sim N(0, \Sigma_{\theta})\)</span>). Why is this step necessary and how does it differentiate random effects from nuisance variables?</p></li>
-<li><p>Yarkoni (2019) argued that mixed effects models should be standard practice for increasing generalizability of findings in psychology and neuroscience. How exactly does this lead towards better generalizability? Where could this potentially harm generalizability?</p></li>
+<li><p>You run a study on classroom distractions and learning. If your dataset contains exactly two classrooms and you only care about those two rooms, how should classroom be treated in the model? If you want to say something about classrooms in general, how should it be treated?</p></li>
+<li><p>Yarkoni (2019) argued that mixed effects models should be standard practice for increasing generalizability of findings in psychology and neuroscience.</p></li>
 </ol>
+<ul class="simple">
+<li><p>What problem are mixed-effects models trying to fix in traditional statistical analyses?</p></li>
+<li><p>How do random effects actually change what a study’s conclusion means?</p></li>
+<li><p>Why might a statistically “worse” model produce scientifically better evidence?</p></li>
+<li><p>Under what circumstances could mixed-effects models reduce generalizability instead of improve it?</p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
