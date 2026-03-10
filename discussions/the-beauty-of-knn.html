@@ -306,8 +306,6 @@
 
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Discussion questions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../exercises/11_the-beauty-of-knn.html">Exercise 11: The beauty of kNN</a></li>
-
-
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../lectures/cross-validation.html">Cross validation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -551,8 +549,8 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="discussion-questions">
 <h1>Discussion questions<a class="headerlink" href="#discussion-questions" title="Link to this heading">#</a></h1>
 <ol class="arabic simple">
-<li><p>kNN methods are the real first non-parametric models that we have discussed in this class. Provide contrastive examples of cases where kNN would be preferred over linear models, like linear or logistic regression, <em>before</em> results are known. (In other words, it is easy to justify kNN when you have non-linearities in your data, but conceptually when would it be ideal to <em>start</em> with kNN approaches?)</p></li>
-<li><p>The core of the kNN approach is the concept of data distances: data points that are closer together are assumed to be more likely to have come from the same underlying distribution. Provide an example where this assumption breaks down (i.e., when distance is not a good measure of similarity).</p></li>
+<li><p>kNN makes predictions based on similarity between observations rather than estimating explicit parameters like regression models do. When might this way of thinking about prediction feel useful, and when might a regression approach feel more appropriate?</p></li>
+<li><p>kNN relies heavily on distance in feature space to determine similarity of observsations. In psychological or neuroscience data, what does “similarity” actually mean? Who decides what counts as similar? When might distance be a meaningful representation of reality, and when might it be misleading?</p></li>
 </ol>
 </section>
 

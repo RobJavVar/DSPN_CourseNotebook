@@ -306,8 +306,6 @@
 
 <li class="toctree-l2"><a class="reference internal" href="../discussions/the-beauty-of-knn.html">Discussion questions</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercise 11: The beauty of kNN</a></li>
-
-
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../lectures/cross-validation.html">Cross validation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -595,19 +593,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 11: The beauty of kNN</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-plotting-and-train-test-sets-2-pts">1. Data, Plotting, and Train/Test Sets (2 pts)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-plotting-and-train-test-sets-2-points">1. Data, Plotting, and Train/Test Sets (2 points)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot">Plot</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-vs-train">Test vs Train</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-3-points">2: KNN (3 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-3-points">2. KNN (3 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop-3-points">3. For loop (3 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standardizing-predictors-2-points">4. Standardizing predictors (2 points)</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop-3-points">3: for loop (3 points)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#standardizing-predictors-2">4: Standardizing predictors (2)</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -620,10 +614,10 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercise-11-the-beauty-of-knn">
 <h1>Exercise 11: The beauty of kNN<a class="headerlink" href="#exercise-11-the-beauty-of-knn" title="Link to this heading">#</a></h1>
-<p>In this exercise, you’ll gain practice working with kNN. We’ll use the <a class="reference external" href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a> dataset, which comes as part of <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>. This dataset provides information on the quality and price of 50,000 diamonds</p>
-<section id="data-plotting-and-train-test-sets-2-pts">
-<h2>1. Data, Plotting, and Train/Test Sets (2 pts)<a class="headerlink" href="#data-plotting-and-train-test-sets-2-pts" title="Link to this heading">#</a></h2>
+<p>In this exercise, you’ll gain practice working with kNN. We’ll use the <a class="reference external" href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a> dataset, which comes as part of <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>. This dataset provides information on the quality and price of 50,000 diamonds.</p>
 <hr class="docutils" />
+<section id="data-plotting-and-train-test-sets-2-points">
+<h2>1. Data, Plotting, and Train/Test Sets (2 points)<a class="headerlink" href="#data-plotting-and-train-test-sets-2-points" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Load the the <code class="docutils literal notranslate"><span class="pre">class</span></code> and <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code> packages.</p></li>
 <li><p>Assign the <code class="docutils literal notranslate"><span class="pre">diamonds</span></code> data set to a simpler name. Then, create a new variable <code class="docutils literal notranslate"><span class="pre">price_bin</span></code> that splits the <code class="docutils literal notranslate"><span class="pre">price</span></code> variable into a binary variable, where 1 indicates that the diamond costs greater than the mean price, and 0 indicates that the diamond costs less than the mean price. Set <code class="docutils literal notranslate"><span class="pre">price_bin</span></code> to be a factor. (<em>Hint: use the if_else() function</em>)</p></li>
@@ -670,9 +664,9 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="knn-3-points">
-<h2>2: KNN (3 points)<a class="headerlink" href="#knn-3-points" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
+<section id="knn-3-points">
+<h2>2. KNN (3 points)<a class="headerlink" href="#knn-3-points" title="Link to this heading">#</a></h2>
 <p>Now, use the <code class="docutils literal notranslate"><span class="pre">knn()</span></code> function from the <code class="docutils literal notranslate"><span class="pre">class</span></code> library to predict <code class="docutils literal notranslate"><span class="pre">price_bin</span></code> from the <code class="docutils literal notranslate"><span class="pre">carat</span></code> and <code class="docutils literal notranslate"><span class="pre">depth</span></code>. Set <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">=</span> <span class="pre">3</span></code>.</p>
 <p><em>Hint: Review the format required for the arguments of knn()</em></p>
 <div class="cell docutils container">
@@ -715,10 +709,9 @@ document.write(`
 </ul>
 </div></blockquote>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="for-loop-3-points">
-<h1>3: for loop (3 points)<a class="headerlink" href="#for-loop-3-points" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
+<section id="for-loop-3-points">
+<h2>3. For loop (3 points)<a class="headerlink" href="#for-loop-3-points" title="Link to this heading">#</a></h2>
 <p>So adding additional predictors didn’t shift our error much. Let’s see if adjusting <code class="docutils literal notranslate"><span class="pre">k</span></code> has a larger impact on model accuracy.</p>
 <p>Using your initial model above with just <code class="docutils literal notranslate"><span class="pre">carat</span></code> and <code class="docutils literal notranslate"><span class="pre">depth</span></code>, run a <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loop</span></code> that runs the same model 30 times, for <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">=</span> <span class="pre">1:30</span></code>.</p>
 <p>Output a data frame that has <code class="docutils literal notranslate"><span class="pre">k</span></code> and the overall <code class="docutils literal notranslate"><span class="pre">error</span></code> as columns.</p>
@@ -738,11 +731,11 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">k</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">30</span><span class="p">))</span> <span class="p">{</span>
     <span class="n">knn_fits</span>  <span class="o">&lt;-</span> <span class="c1"># your knn function here</span>
-    
+
     <span class="c1">#overall error</span>
     <span class="n">conf_df</span>  <span class="o">&lt;-</span> <span class="c1"># data frame of test predictions versus actual test</span>
     <span class="n">output</span><span class="err">$</span><span class="n">error</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>  <span class="o">&lt;-</span> <span class="c1">#calculate error from conf_df and add to your output dataframe</span>
-   
+
 <span class="p">}</span>
 <span class="n">head</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
 </pre></div>
@@ -765,9 +758,9 @@ document.write(`
 </ul>
 </div></blockquote>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="standardizing-predictors-2">
-<h1>4: Standardizing predictors (2)<a class="headerlink" href="#standardizing-predictors-2" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
+<section id="standardizing-predictors-2-points">
+<h2>4. Standardizing predictors (2 points)<a class="headerlink" href="#standardizing-predictors-2-points" title="Link to this heading">#</a></h2>
 <p>Because knn is based on distances between points, it is very sensitive to the scale of your variables. Looking at our predictor variables, we can see that <code class="docutils literal notranslate"><span class="pre">carat</span></code> and <code class="docutils literal notranslate"><span class="pre">depth</span></code> are orders of magnitude different in terms of scales. Maybe we can improve our fit even more by addressing this!</p>
 <p>Below, use the <code class="docutils literal notranslate"><span class="pre">scale()</span></code> function to standardize your predictors. (Note that you don’t need to standardize <code class="docutils literal notranslate"><span class="pre">price_bin</span></code>.)</p>
 <p>Then, run your model a final time with your standardized predictors (just <code class="docutils literal notranslate"><span class="pre">carat</span></code> and <code class="docutils literal notranslate"><span class="pre">depth</span></code> still). Set <code class="docutils literal notranslate"><span class="pre">k</span></code> to the optimal value you determined in your plot above. Output the confusion matrix and error rate again.</p>
@@ -786,11 +779,13 @@ document.write(`
 <li></li>
 </ul>
 </div></blockquote>
-<p><strong>DUE:</strong> 5pm March 17, 2026</p>
+<p><strong>DUE:</strong> 11:59pm March 17, 2026</p>
 <p><strong>IMPORTANT</strong> Did you collaborate with anyone on this assignment? If so, list their names here.</p>
 <blockquote>
 <div><p><em>Someone’s Name</em></p>
 </div></blockquote>
+<p><strong>GenAI Utilization</strong> Did you utilize any generative AI tools on this assignment? If so, please list the item and the paste respective prompt you used.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -857,19 +852,15 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 11: The beauty of kNN</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-plotting-and-train-test-sets-2-pts">1. Data, Plotting, and Train/Test Sets (2 pts)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-plotting-and-train-test-sets-2-points">1. Data, Plotting, and Train/Test Sets (2 points)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot">Plot</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-vs-train">Test vs Train</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-3-points">2: KNN (3 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-3-points">2. KNN (3 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop-3-points">3. For loop (3 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standardizing-predictors-2-points">4. Standardizing predictors (2 points)</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loop-3-points">3: for loop (3 points)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#standardizing-predictors-2">4: Standardizing predictors (2)</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>
