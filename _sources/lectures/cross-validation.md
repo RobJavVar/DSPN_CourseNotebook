@@ -13,5 +13,4 @@
 
 ## Slides (PDF)
 
-<!--[![Cross validation](../thumbnails/cross-validation.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/cross-validation.pdf "Cross validation")-->
-### [Slides not yet available]
+[![Cross validation](../thumbnails/cross-validation.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/16_cross-validation.pdf "Cross validation")
