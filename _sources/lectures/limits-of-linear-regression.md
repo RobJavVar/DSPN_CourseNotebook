@@ -7,7 +7,7 @@
 
 ## Lecture (Video)
 
-<video width="720" controls poster="https://raw.githubusercontent.com/RobJavVar/DSPN_CourseNotebook/main/book/thumbnails/limits-and-variations-of-linear-regression.jpeg">
+<video width="800" controls poster="https://raw.githubusercontent.com/RobJavVar/DSPN_CourseNotebook/main/book/thumbnails/limits-and-variations-of-linear-regression.jpeg">
   <source src="https://github.com/RobJavVar/DSPN_CourseNotebook/raw/refs/heads/main/book/recordings/12_LimitsVariationsOfLinearRegression.mp4" type="video/mp4">
 </video>
 
