@@ -7,8 +7,9 @@
 
 ## Lecture (Video)
 
-<!--[![Limits and variations of linear regression](../thumbnails/limits-and-variations-of-linear-regression.jpeg)](https://www.youtube.com/watch?v=mk0P-39k-r4 "Limits and variations of linear regression")-->
-### [Video not yet available]
+<video width="800" controls poster="https://raw.githubusercontent.com/RobJavVar/DSPN_CourseNotebook/main/book/thumbnails/limits-and-variations-of-linear-regression.jpeg">
+  <source src="https://github.com/RobJavVar/DSPN_CourseNotebook/raw/refs/heads/main/book/recordings/12_LimitsVariationsOfLinearRegression.mp4" type="video/mp4">
+</video>
 
 ## Slides (PDF)
 
