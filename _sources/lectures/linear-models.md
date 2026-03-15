@@ -11,7 +11,6 @@
   <source src="https://github.com/RobJavVar/DSPN_CourseNotebook/raw/refs/heads/main/book/recordings/10_linear-models.mp4" type="video/mp4">
 </video>
 
-
 ## Slides (PDF)
 
 [![Linear models](../thumbnails/linear-models.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/10_linear-models.pdf "Linear models")
