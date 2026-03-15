@@ -14,7 +14,7 @@
 </a>
 
 <video width="800" controls>
-  <source src="../recordings/10_linear-models.mp4" type="video/mp4">
+  <source src="https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/recordings/10_linear-models.mp4" type="video/mp4">
 </video>
 
 ## Slides (PDF)
