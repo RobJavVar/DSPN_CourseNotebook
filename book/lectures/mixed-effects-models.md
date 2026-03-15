@@ -9,8 +9,9 @@
 
 ## Lecture (Video)
 
-<!--[![Mixed effects models](../thumbnails/mixed-effects-models.jpeg)](https://youtu.be/w-niplAO22I "Mixed effects models")-->
-### [Video not yet available]
+<video width="800" controls poster="https://raw.githubusercontent.com/RobJavVar/DSPN_CourseNotebook/main/book/thumbnails/mixed-effects-models.jpeg">
+  <source src="https://github.com/RobJavVar/DSPN_CourseNotebook/raw/refs/heads/main/book/recordings/14_mixed-effect-models.mp4" type="video/mp4">
+</video>
 
 ## Slides (PDF)
 

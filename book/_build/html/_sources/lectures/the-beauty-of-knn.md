@@ -9,8 +9,9 @@
 
 ## Lecture (Video)
 
-<!--[![The beauty of kNN](../thumbnails/the-beauty-of-knn.jpeg)](https://www.youtube.com/watch?v=tvZ7MXTH3lk "The beauty of kNN")-->
-### [Video not yet available]
+<video width="800" controls poster="https://raw.githubusercontent.com/RobJavVar/DSPN_CourseNotebook/main/book/thumbnails/the-beauty-of-knn.jpeg">
+  <source src="https://github.com/RobJavVar/DSPN_CourseNotebook/raw/refs/heads/main/book/recordings/15_kNN.mp4" type="video/mp4">
+</video>
 
 ## Slides (PDF)
 
