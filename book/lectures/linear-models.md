@@ -10,7 +10,7 @@
 <!--[![Linear models](../thumbnails/linear-models.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/recordings/10_linear-models.mp4 "Linear models")-->
 
 <a href="../recordings/10_linear-models.mp4">
-  <img src="../thumbnails/linear-models.jpeg" width="600">
+  <img href="../thumbnails/linear-models.jpeg" width="600">
 </a>
 
 ## Slides (PDF)
