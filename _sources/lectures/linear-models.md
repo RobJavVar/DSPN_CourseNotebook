@@ -7,8 +7,7 @@
 
 ## Lecture (Video)
 
-<!--[![Linear models](../thumbnails/linear-models.jpeg)](https://youtu.be/yfKHlNwT4KA "Linear models")-->
-### [Video not yet available]
+[![Linear models](../thumbnails/linear-models.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/recordings/10_linear-models.mp4 "Linear models")
 
 ## Slides (PDF)
 
