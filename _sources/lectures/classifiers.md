@@ -7,8 +7,9 @@
 
 ## Lecture (Video)
 
-<!--[![Classifiers](../thumbnails/classifiers.jpeg)](https://www.youtube.com/watch?v=r78WCl1vSik "Classifiers")-->
-### [Video not yet available]
+<video width="800" controls poster="https://raw.githubusercontent.com/RobJavVar/DSPN_CourseNotebook/main/book/thumbnails/classifiers.jpeg">
+  <source src="https://github.com/RobJavVar/DSPN_CourseNotebook/raw/refs/heads/main/book/recordings/13_classifiers.mp4" type="video/mp4">
+</video>
 
 ## Slides (PDF)
 
