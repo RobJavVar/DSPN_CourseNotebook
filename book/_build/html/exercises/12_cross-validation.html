@@ -316,10 +316,6 @@
 
 <li class="toctree-l2"><a class="reference internal" href="../discussions/cross-validation.html">Discussion questions</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercise 12: Cross validation</a></li>
-
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../lectures/resampling-methods.html">Resampling methods</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -593,16 +589,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 12: Cross validation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-1-pts">1: Data (1 pts)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#leave-one-out-cross-validation-4-pts">2. Leave-one-out Cross Validation (4 pts)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-to-cv-glm-3-pts">3. Compare to <code class="docutils literal notranslate"><span class="pre">cv.glm</span></code> (3 pts)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adjusting-k-and-reflection-2-pts">4. Adjusting K and Reflection (2 pts)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection">Reflection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data-1-point">1. Load Data (1 point)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leave-one-out-cross-validation-4-points">2. Leave-one-out Cross Validation (4 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-to-cv-glm-3-points">3. Compare to <code class="docutils literal notranslate"><span class="pre">cv.glm</span></code> (3 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adjusting-k-and-reflection-2-points">4. Adjusting K and Reflection (2 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection">Reflection</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -615,12 +609,10 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercise-12-cross-validation">
 <h1>Exercise 12: Cross validation<a class="headerlink" href="#exercise-12-cross-validation" title="Link to this heading">#</a></h1>
-<hr class="docutils" />
 <p>In this exercise, we’ll practice implementing cross validation techniques, including leave-one-out and k-fold cross validation. We’ll use the <code class="docutils literal notranslate"><span class="pre">PimaIndiansDiabetes2</span></code> practice dataset, which has medical data on a group of Pima Native American women, including whether or not they have diabetes. This dataset is part of the <code class="docutils literal notranslate"><span class="pre">mlbench</span></code> package. We’ll be using each person’s medical history to predict whether or not they have been diagnosed with diabetes.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="data-1-pts">
-<h1>1: Data (1 pts)<a class="headerlink" href="#data-1-pts" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
+<section id="load-data-1-point">
+<h2>1. Load Data (1 point)<a class="headerlink" href="#load-data-1-point" title="Link to this heading">#</a></h2>
 <p>Load the <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code>, <code class="docutils literal notranslate"><span class="pre">boot</span></code>, and <code class="docutils literal notranslate"><span class="pre">mlbench</span></code> packages (you may need to install <code class="docutils literal notranslate"><span class="pre">boot</span></code> and <code class="docutils literal notranslate"><span class="pre">mlbench</span></code>).</p>
 <p>Load the <code class="docutils literal notranslate"><span class="pre">PimaIndiansDiabetes2</span></code> dataset using the <code class="docutils literal notranslate"><span class="pre">data()</span></code> function. Drop the <code class="docutils literal notranslate"><span class="pre">insulin</span></code> column (it just has a lot of missing data) and then drop <code class="docutils literal notranslate"><span class="pre">NA</span></code>s from the rest of the dataset. Save your updated dataset to a new variable name. Finally, print the dimensions of your new dataset, and look at the first few lines of data.</p>
 <div class="cell docutils container">
@@ -632,12 +624,13 @@ document.write(`
 </div>
 <p>(Note that in medical contexts, <code class="docutils literal notranslate"><span class="pre">pedigree</span></code> refers to a system of measuring family history of a condition. So here, higher numbers mean greater family history of diabetes. You can read more about this dataset <a class="reference external" href="https://rdrr.io/cran/mlbench/man/PimaIndiansDiabetes.html">here</a>.)</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="leave-one-out-cross-validation-4-pts">
-<h1>2. Leave-one-out Cross Validation (4 pts)<a class="headerlink" href="#leave-one-out-cross-validation-4-pts" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="leave-one-out-cross-validation-4-points">
+<h2>2. Leave-one-out Cross Validation (4 points)<a class="headerlink" href="#leave-one-out-cross-validation-4-points" title="Link to this heading">#</a></h2>
 <p>In the tutorial, we learned how to fit leave-one-out cross validation using the <code class="docutils literal notranslate"><span class="pre">cv.glm</span></code> function from the <code class="docutils literal notranslate"><span class="pre">boot</span></code> package. But we can also do this manually using <code class="docutils literal notranslate"><span class="pre">predict()</span></code> like we have in the past.</p>
 <p>Let’s predict <code class="docutils literal notranslate"><span class="pre">diabetes</span></code>, a dichotomous outcome, using all the other variables in our modified dataset.</p>
-<p>First, fit a logistic regression model using all of the observations except the very first one. Then use your fitted model to predict whether your holdout case is positive or negative for diabetes. Remember that logistic regression coefficients are in <strong>log-odds</strong>, meaning that if an output is positive, the probability of the outcome is greater than 50%; if the output is negative, the probability of the outcome is less than 50%.</p>
-<p>Compare your result to the actual response in row one above. Did your model correctly classify this observation?</p>
+<p>First, fit a logistic regression model using all of the observations except the very first one. Then use your fitted model to predict whether your holdout case is positive or negative for diabetes. Remember that in logistic regression, the model output (before applying the sigmoid function) is in <strong>log-odds</strong>. If this output is positive, the predicted probability is greater than 50%; if it is negative, the predicted probability is less than 50%.</p>
+<p>Compare your prediction to the actual response for the first observation that you initially excluded. Did your model correctly classify this observation?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># INSERT CODE HERE</span>
@@ -645,7 +638,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>So we just calculated a single iteration of LOOCV. We used 531 rows of our data to fit a model to predict the outcome of the last row.</p>
+<p>So we just calculated a single iteration of leave-one-out cross validation. We used 531 rows of our data to fit a model to predict the outcome of the last row.</p>
 <p>Below, use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate through the rest of your dataset doing the same thing. You will need to:</p>
 <ul class="simple">
 <li><p>Create a data frame <code class="docutils literal notranslate"><span class="pre">results</span></code> with two columns: one named <code class="docutils literal notranslate"><span class="pre">actual</span></code> which holds the true classification for each observation, and one named <code class="docutils literal notranslate"><span class="pre">predicted</span></code>, which should be filled with <code class="docutils literal notranslate"><span class="pre">NA</span></code>s. This is where you’ll store the output of your loop.</p></li>
@@ -662,16 +655,16 @@ document.write(`
 <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">dat</span><span class="p">)){</span> <span class="c1">#don&#39;t forget to change this to your data set name</span>
     <span class="c1"># separate individual observation `i` from the rest of your data</span>
     <span class="c1"># INSERT CODE HERE</span>
-    
+
     <span class="c1"># train your model</span>
     <span class="c1"># INSERT CODE HERE</span>
-    
+
     <span class="c1"># test model on hold out observation</span>
     <span class="c1"># INSERT CODE HERE</span>
-    
+
     <span class="c1"># classify model prediction as &quot;pos&quot; or &quot;neg&quot; and add to `results`</span>
     <span class="c1"># INSERT CODE HERE</span>
-    
+
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -686,13 +679,14 @@ document.write(`
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="compare-to-cv-glm-3-pts">
-<h1>3. Compare to <code class="docutils literal notranslate"><span class="pre">cv.glm</span></code> (3 pts)<a class="headerlink" href="#compare-to-cv-glm-3-pts" title="Link to this heading">#</a></h1>
-<p>Now, let’s compare this result to the <code class="docutils literal notranslate"><span class="pre">cv.glm</span></code> function. Using the tutorial as a guide, use <code class="docutils literal notranslate"><span class="pre">cv.glm</span></code> to run LOOCV on the data, using the same model (i.e., still using all of the variables to predict diabetes diagnosis).</p>
-<p>Note that, because this is a <code class="docutils literal notranslate"><span class="pre">classification</span></code> problem and not a regression problem like in the tutorial, we need to adjust the <code class="docutils literal notranslate"><span class="pre">cost</span></code> argument of <code class="docutils literal notranslate"><span class="pre">cv.glm</span></code>. We can read more about this in the docs:</p>
+<hr class="docutils" />
+<section id="compare-to-cv-glm-3-points">
+<h2>3. Compare to <code class="docutils literal notranslate"><span class="pre">cv.glm</span></code> (3 points)<a class="headerlink" href="#compare-to-cv-glm-3-points" title="Link to this heading">#</a></h2>
+<p>Now, let’s compare this result to the <code class="docutils literal notranslate"><span class="pre">cv.glm</span></code> function. Using the tutorial as a guide, use <code class="docutils literal notranslate"><span class="pre">cv.glm</span></code> to run LOOCV on the data, using the same model (i.e. still using all of the variables to predict diabetes diagnosis).</p>
+<p>Note that, because this is a <code class="docutils literal notranslate"><span class="pre">classification</span></code> problem and not a regression problem like in the tutorial, we need to adjust the <code class="docutils literal notranslate"><span class="pre">cost</span></code> argument of <code class="docutils literal notranslate"><span class="pre">cv.glm</span></code>. For more details, see the function documentation by running <code class="docutils literal notranslate"><span class="pre">?cv.glm</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#?cv.glm</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">?</span>cv.glm
 </pre></div>
 </div>
 </div>
@@ -702,7 +696,11 @@ document.write(`
 <div><p>“A function of two vector arguments specifying the cost function for the cross-validation. The first argument to cost should correspond to the <strong>observed responses</strong> and the second argument should correspond to the <strong>predicted or fitted responses</strong> from the generalized linear model.”</p>
 </div></blockquote>
 <p>In the example code (scroll to bottom of the docs), we see that the appropriate cost function for a binary classification is</p>
-<p><code class="docutils literal notranslate"><span class="pre">cost</span> <span class="pre">&lt;-</span> <span class="pre">function(r,</span> <span class="pre">pi</span> <span class="pre">=</span> <span class="pre">0)</span> <span class="pre">mean(abs(r-pi)</span> <span class="pre">&gt;</span> <span class="pre">0.5)</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cost</span> <span class="o">&lt;-</span> <span class="n">function</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">pi</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">mean</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">pi</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p>Where <code class="docutils literal notranslate"><span class="pre">r</span></code> is the vector of observed responses (technically “pos” and “neg”, but R treats these as 1 and 0 under the hood), and <code class="docutils literal notranslate"><span class="pre">pi</span></code> is the vector of <em>probabilities</em> (not log-odds) fit by the model. Thus, this boils down to our error: what proportion of observations were incorrectly classified. You will need to include this code below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -719,8 +717,9 @@ document.write(`
 </ul>
 </div></blockquote>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="adjusting-k-and-reflection-2-pts">
-<h1>4. Adjusting K and Reflection (2 pts)<a class="headerlink" href="#adjusting-k-and-reflection-2-pts" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="adjusting-k-and-reflection-2-points">
+<h2>4. Adjusting K and Reflection (2 points)<a class="headerlink" href="#adjusting-k-and-reflection-2-points" title="Link to this heading">#</a></h2>
 <p>Recall that LOOCV has some drawbacks. In particular, it has quite high <em>variance</em> which can lead to poor performance on new test data. We can reduce this variance by increasing K.</p>
 <p>Below, re-run your cross validation using <code class="docutils literal notranslate"><span class="pre">cv.glm</span></code> with <code class="docutils literal notranslate"><span class="pre">k</span></code> set to 3, 5, 10, and 15.</p>
 <div class="cell docutils container">
@@ -743,7 +742,7 @@ document.write(`
 </div>
 </div>
 <section id="reflection">
-<h2>Reflection<a class="headerlink" href="#reflection" title="Link to this heading">#</a></h2>
+<h3>Reflection<a class="headerlink" href="#reflection" title="Link to this heading">#</a></h3>
 <p>How do your errors compare to your LOOCV error above? How do they change as k increases?</p>
 <blockquote>
 <div><ul class="simple">
@@ -758,11 +757,13 @@ document.write(`
 <li></li>
 </ul>
 </div></blockquote>
-<p><strong>DUE:</strong> 5pm March 19, 2026</p>
+<p><strong>DUE:</strong> 11:59pm March 19, 2026</p>
 <p><strong>IMPORTANT</strong> Did you collaborate with anyone on this assignment? If so, list their names here.</p>
 <blockquote>
 <div><p><em>Someone’s Name</em></p>
 </div></blockquote>
+<p><strong>GenAI Utilization</strong> Did you utilize any generative AI tools on this assignment? If so, please list the item and the paste respective prompt you used.</p>
+</section>
 </section>
 </section>
 
@@ -830,16 +831,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 12: Cross validation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-1-pts">1: Data (1 pts)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#leave-one-out-cross-validation-4-pts">2. Leave-one-out Cross Validation (4 pts)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-to-cv-glm-3-pts">3. Compare to <code class="docutils literal notranslate"><span class="pre">cv.glm</span></code> (3 pts)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adjusting-k-and-reflection-2-pts">4. Adjusting K and Reflection (2 pts)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection">Reflection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data-1-point">1. Load Data (1 point)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leave-one-out-cross-validation-4-points">2. Leave-one-out Cross Validation (4 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-to-cv-glm-3-points">3. Compare to <code class="docutils literal notranslate"><span class="pre">cv.glm</span></code> (3 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adjusting-k-and-reflection-2-points">4. Adjusting K and Reflection (2 points)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection">Reflection</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>
