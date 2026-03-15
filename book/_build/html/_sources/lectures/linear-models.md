@@ -7,6 +7,10 @@
 
 ## Lecture (Video)
 
+<a href="https://github.com/RobJavVar/DSPN_CourseNotebook/raw/refs/heads/main/book/recordings/10_linear-models.mp4">
+  <img src="https://github.com/RobJavVar/DSPN_CourseNotebook/tree/refs/heads/main/book/thumbnails/linear-models.jpeg" width="600" alt="Linear models">
+</a>
+
 <video width="720" controls>
   <source src="https://github.com/RobJavVar/DSPN_CourseNotebook/raw/refs/heads/main/book/recordings/10_linear-models.mp4" type="video/mp4">
 </video>
