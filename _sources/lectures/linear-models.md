@@ -7,15 +7,8 @@
 
 ## Lecture (Video)
 
-<!--[![Linear models](../thumbnails/linear-models.jpeg)](../10_linear-models.mp4 "Linear models")-->
+[![Linear models](../thumbnails/linear-models.jpeg)](../10_linear-models.mp4 "Linear models")
 
-<a href="../recordings/10_linear-models.mp4">
-<img src="../thumbnails/linear-models.jpeg" width="600">
-</a>
-
-<video width="800" controls>
-  <source src="https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/recordings/10_linear-models.mp4" type="video/mp4">
-</video>
 
 ## Slides (PDF)
 
