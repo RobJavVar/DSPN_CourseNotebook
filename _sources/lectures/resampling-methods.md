@@ -13,5 +13,4 @@
 
 ## Slides (PDF)
 
-<!--[![Resampling methods](../thumbnails/resampling-methods.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/resampling-methods.pdf "Resampling methods")-->
-### [Slides not yet available]
+[![Resampling methods](../thumbnails/resampling-methods.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/17_resampling-methods.pdf "Resampling methods")

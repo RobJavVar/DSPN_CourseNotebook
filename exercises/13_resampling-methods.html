@@ -57,8 +57,6 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercises/13_resampling-methods';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -611,12 +609,12 @@ document.write(`
 <h1>Exercise 13:  Resampling methods<a class="headerlink" href="#exercise-13-resampling-methods" title="Link to this heading">#</a></h1>
 <p>This homework assignment is designed to give you practice with bootstrapping and permutation tests.</p>
 <p>You will need to download the <strong>unrestricted_trimmed_1_7_2020_10_50_44.csv</strong> file from the <em>Homework/hcp_data</em> folder in the class GitHub repository.</p>
-<p>This data is a portion of the <a class="reference external" href="http://www.humanconnectomeproject.org/">Human Connectome Project database</a>. It provides measures of cognitive tasks and brain morphology measuresments from 1206 participants. The full description of each variable is provided in the <strong>HCP_S1200_DataDictionary_April_20_2018.csv</strong> file in the <em>Homework/hcp_data</em> folder in the class GitHub repository.</p>
+<p>This data is a portion of the <a class="reference external" href="http://www.humanconnectomeproject.org/">Human Connectome Project database</a>. It provides measures of cognitive tasks and brain morphology measurements from 1206 participants. The full description of each variable is provided in the <strong>HCP_S1200_DataDictionary_April_20_2018.csv</strong> file in the <em>Homework/hcp_data</em> folder in the class GitHub repository.</p>
 <hr class="docutils" />
 <section id="loading-visualizing-the-data-1-point">
 <h2>1. Loading &amp; Visualizing the Data (1 point)<a class="headerlink" href="#loading-visualizing-the-data-1-point" title="Link to this heading">#</a></h2>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">setwd</span></code> and <code class="docutils literal notranslate"><span class="pre">read.csv</span></code> functions to load data from the <strong>unrestricted_trimmed_1_7_2020_10_50_44.csv</strong> file.</p>
-<p>(a) Using the tidyverse tools, make a new dataframe <code class="docutils literal notranslate"><span class="pre">d1</span></code> that only inclues the subject ID (<code class="docutils literal notranslate"><span class="pre">Subject</span></code>), gender (<code class="docutils literal notranslate"><span class="pre">Gender</span></code>, self reported at time of data collection), Flanker Task performance (<code class="docutils literal notranslate"><span class="pre">Flanker_Unadj</span></code>), total intracranial volume (<code class="docutils literal notranslate"><span class="pre">FS_IntraCranial_Vol</span></code>), total white matter volume (<code class="docutils literal notranslate"><span class="pre">FS_Tot_WM_Vol</span></code>), and total grey matter volume (<code class="docutils literal notranslate"><span class="pre">FS_Total_GM_Vol</span></code>) variables and remove all <em>na</em> values.</p>
+<p>(a) Using the tidyverse tools, create a new dataframe <code class="docutils literal notranslate"><span class="pre">d1</span></code> that only includes the subject ID (<code class="docutils literal notranslate"><span class="pre">Subject</span></code>), gender (<code class="docutils literal notranslate"><span class="pre">Gender</span></code>, self reported at time of data collection), Flanker Task performance (<code class="docutils literal notranslate"><span class="pre">Flanker_Unadj</span></code>), total intracranial volume (<code class="docutils literal notranslate"><span class="pre">FS_IntraCranial_Vol</span></code>), total white matter volume (<code class="docutils literal notranslate"><span class="pre">FS_Tot_WM_Vol</span></code>), and total grey matter volume (<code class="docutils literal notranslate"><span class="pre">FS_Total_GM_Vol</span></code>) variables and remove all <em>na</em> values.</p>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">head</span></code> function to look at the first few rows of each data frame.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -642,7 +640,7 @@ document.write(`
 <section id="logistic-classifier-2-points">
 <h2>2. Logistic classifier (2 points)<a class="headerlink" href="#logistic-classifier-2-points" title="Link to this heading">#</a></h2>
 <p>We want to try predicting gender using the neural data you have loaded.</p>
-<p>(a) Run a logisic regression model to predict gender from total white matter volume, total grey matter volume, and intracranial volume.</p>
+<p>(a) Run a logistic regression model to predict gender from total white matter volume, total grey matter volume, and intracranial volume.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># WRITE YOUR CODE HERE</span>
@@ -650,7 +648,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Which factors are signficantly associated with gender?</p>
+<p>Which factors are significantly associated with gender?</p>
 <blockquote>
 <div><p><em>Write your response here</em></p>
 </div></blockquote>
@@ -670,7 +668,7 @@ document.write(`
 <hr class="docutils" />
 <section id="bootstrapped-accuracy-3-points">
 <h2>3. Bootstrapped accuracy (3 points)<a class="headerlink" href="#bootstrapped-accuracy-3-points" title="Link to this heading">#</a></h2>
-<p>Use bootstrapping to estimate the confidence intervals of the <em>prediction accuracy</em> of your model (i.e., the confidence of the correlation between <span class="math notranslate nohighlight">\(\hat{y}\)</span> and <span class="math notranslate nohighlight">\(y\)</span>). Plot the histogram of the bootstrapped prediction accuracies and estimate the confidence intervals off of the standard deviation from the bootstrap.</p>
+<p>Use bootstrapping to estimate the confidence interval for your model’s prediction accuracy. Plot a histogram of the bootstrapped accuracies, and estimate the confidence interval using the standard deviation of the bootstrap distribution.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># WRITE YOUR CODE HERE</span>
@@ -686,7 +684,7 @@ document.write(`
 <hr class="docutils" />
 <section id="permutation-test-for-grey-matter-effects-3-points">
 <h2>4. Permutation test for grey matter effects (3 points)<a class="headerlink" href="#permutation-test-for-grey-matter-effects-3-points" title="Link to this heading">#</a></h2>
-<p>Now run a permutation test, with 1000 iterations, to evaluate how much grey matter volume contributes to the prediction accuracy. Compare the prediction accuracy of the full (unpermuted model) with the distribution of accuracies you get with a randomized grey matter volume term using a histogram (Hint: use the <code class="docutils literal notranslate"><span class="pre">abline</span></code> function to show the original accuracy on the histogram).</p>
+<p>Now run a permutation test, with 1000 iterations, to evaluate how much grey matter volume contributes to the prediction accuracy. Compare the prediction accuracy of the full (unpermuted) model with the distribution of accuracies obtained when the grey matter volume variable is permuted, using a histogram (Hint: use the <code class="docutils literal notranslate"><span class="pre">abline</span></code> function to show the original accuracy on the histogram).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># WRITE YOUR CODE HERE</span>
@@ -702,15 +700,16 @@ document.write(`
 <hr class="docutils" />
 <section id="reflection-1-point">
 <h2>5. Reflection (1 point)<a class="headerlink" href="#reflection-1-point" title="Link to this heading">#</a></h2>
-<p>Differentiate the bootstrap from a permutation test. Describe each and when is it appropriate to each.</p>
+<p>Differentiate the bootstrap from a permutation test. Describe each and explain when each is appropriate.</p>
 <blockquote>
 <div><p><em>Write your response here</em></p>
 </div></blockquote>
-<p><strong>DUE:</strong> 5pm EST, March 24, 2026</p>
+<p><strong>DUE:</strong> 11:59pm EST, March 24, 2026</p>
 <p><strong>IMPORTANT</strong> Did you collaborate with anyone on this assignment? If so, list their names here.</p>
 <blockquote>
 <div><p><em>Someone’s Name</em></p>
 </div></blockquote>
+<p><strong>GenAI Utilization</strong> Did you utilize any generative AI tools on this assignment? If so, please list the item and the paste respective prompt you used.</p>
 </section>
 </section>
 
