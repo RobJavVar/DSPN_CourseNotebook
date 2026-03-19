@@ -623,7 +623,7 @@ document.write(`
 <p><span class="math notranslate nohighlight">\(c\)</span> is reading comprehension, <span class="math notranslate nohighlight">\(x\)</span> is word reading experience, and <span class="math notranslate nohighlight">\(a\)</span> is age. <span class="math notranslate nohighlight">\(\beta_{c0}\)</span> and <span class="math notranslate nohighlight">\(\beta_{x0}\)</span> are intercept terms for their respective formulas, and <span class="math notranslate nohighlight">\(\epsilon_{c}\)</span> and <span class="math notranslate nohighlight">\(\epsilon_{x}\)</span> are gaussian noise terms. We’ll start by writing a function, <code class="docutils literal notranslate"><span class="pre">simulate_data</span></code>, that can simulate this relationship. The input values are set and the function structure is provided below. Complete the function such that it takes in those input variables and generates <span class="math notranslate nohighlight">\(age\)</span>, <span class="math notranslate nohighlight">\(x\)</span>, and <span class="math notranslate nohighlight">\(c\)</span> values. Use <code class="docutils literal notranslate"><span class="pre">runif()</span></code> to generate ages. Use <code class="docutils literal notranslate"><span class="pre">rnorm()</span></code> to generate the noise terms.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">sample_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="c1"># How many children in data set? </span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">sample_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="c1"># How many children in data set?</span>
 <span class="n">age_lo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">80</span><span class="w">     </span><span class="c1"># minimum age, in months</span>
 <span class="n">age_hi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">200</span><span class="w">    </span><span class="c1"># maximum age, in months</span>
 <span class="n">beta_xa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="w">   </span><span class="c1"># amount by which experience changes for increase of one month in age</span>
@@ -631,13 +631,13 @@ document.write(`
 <span class="n">sd_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="w">       </span><span class="c1"># standard dev of gaussian noise term, epsilon_x</span>
 <span class="n">beta_ca</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="w">   </span><span class="c1"># amount that comprehension score improves for every increase of one unit in age</span>
 <span class="n">beta_cx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="w">     </span><span class="c1"># amount that comprehension score improves for every increase of one unit in reading experience</span>
-<span class="n">beta_c0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="w">    </span><span class="c1"># comprehension score when reading experience is 0. </span>
+<span class="n">beta_c0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="w">    </span><span class="c1"># comprehension score when reading experience is 0.</span>
 <span class="n">sd_c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">85</span><span class="w">      </span><span class="c1"># standard dev of gaussian noise term, epsilon_c</span>
 
-<span class="n">simulate_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">sample_size</span><span class="p">,</span><span class="w"> </span><span class="n">age_lo</span><span class="p">,</span><span class="w"> </span><span class="n">age_hi</span><span class="p">,</span><span class="w"> </span><span class="n">beta_xa</span><span class="p">,</span><span class="w"> </span>
+<span class="n">simulate_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">sample_size</span><span class="p">,</span><span class="w"> </span><span class="n">age_lo</span><span class="p">,</span><span class="w"> </span><span class="n">age_hi</span><span class="p">,</span><span class="w"> </span><span class="n">beta_xa</span><span class="p">,</span>
 <span class="w">                          </span><span class="n">beta_x0</span><span class="p">,</span><span class="w"> </span><span class="n">sd_x</span><span class="p">,</span><span class="w"> </span><span class="n">beta_ca</span><span class="p">,</span><span class="w"> </span><span class="n">beta_cx</span><span class="p">,</span><span class="w"> </span><span class="n">beta_c0</span><span class="p">,</span><span class="w"> </span><span class="n">sd_c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="c1"># WRITE YOUR CODE HERE</span>
-<span class="w">      </span>
+
 <span class="p">}</span>
 
 <span class="c1">#dat &lt;- simulate_data(sample_size, age_lo, age_hi, beta_xa, beta_x0, sd_x, beta_ca, beta_cx, beta_c0, sd_c)</span>
@@ -658,7 +658,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>a) Plot the relationship between age and reading comprehension.</p>
+<p>a) Create a scatter plot showing the relationship between age and reading comprehension.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># WRITE YOUR CODE HERE</span>
@@ -666,7 +666,8 @@ document.write(`
 </div>
 </div>
 </div>
-<p>b) Plot the relationship between reading experience, age, and reading comprehension.</p>
+<p>b) Create a scatter plot showing the relationship among age, reading experience, and reading comprehension.</p>
+<p><em>Hint: You can represent reading comprehension using an additional visual dimension such as the color or size of the points.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># WRITE YOUR CODE HERE</span>
@@ -698,11 +699,11 @@ document.write(`
 <hr class="docutils" />
 <section id="reflection-1-point">
 <h2>5. Reflection (1 point)<a class="headerlink" href="#reflection-1-point" title="Link to this heading">#</a></h2>
-<p>How do you interpret these results? Why do you think the analysis yielded this result?</p>
+<p>Is there a significant direct or indirect effect? What do you conclude based on the analyses above?</p>
 <blockquote>
 <div><p><em>Write your response here</em></p>
 </div></blockquote>
-<p><strong>DUE:</strong> 5pm EST, March 26, 2026</p>
+<p><strong>DUE:</strong> 11:59pm EST, March 26, 2026</p>
 <p><strong>IMPORTANT</strong> Did you collaborate with anyone on this assignment? If so, list their names here.</p>
 <blockquote>
 <div><p><em>Someone’s Name</em></p>
