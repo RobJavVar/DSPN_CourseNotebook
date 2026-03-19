@@ -13,5 +13,4 @@
 
 ## Slides (PDF)
 
-<!--[![Mediation and moderation](../thumbnails/mediation-and-moderation.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/mediation-and-moderation.pdf "Mediation and moderation")-->
-### [Video not yet available]
+[![Mediation and moderation](../thumbnails/mediation-and-moderation.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/18_mediation-and-moderation.pdf "Mediation and moderation")

@@ -57,8 +57,6 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'discussions/regularized-regression';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -547,9 +545,13 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="discussion-questions">
 <h1>Discussion questions<a class="headerlink" href="#discussion-questions" title="Link to this heading">#</a></h1>
 <ol class="arabic simple">
-<li><p>Does it make sense to calculate the p-value on individual regression coefficients from a ridge or lasso model? Why or why not?</p></li>
-<li><p>The traditional notion of the bias-variance tradeoff states that when the number of parameters in your model, <span class="math notranslate nohighlight">\(p\)</span>, exceeds the number of observations, <span class="math notranslate nohighlight">\(n\)</span>, there is no unique solution to your model. How exactly then does ridge regression, which does not remove variables from your model, resolve the bias-variance tradeoff when <span class="math notranslate nohighlight">\(p&gt;n\)</span>?</p></li>
+<li><p>Suppose two predictors are highly correlated and both are related to the response.</p></li>
 </ol>
+<ul class="simple">
+<li><p>How would OLS, Ridge, and Lasso behave in that situation?</p></li>
+<li><p>Which method would you prefer?</p></li>
+<li><p>Would your answer depend on whether your goal is prediction, interpretation, or variable selection?</p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
