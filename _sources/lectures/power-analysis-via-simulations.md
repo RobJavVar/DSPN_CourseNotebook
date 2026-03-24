@@ -12,5 +12,4 @@
 
 ## Slides (PDF)
 
-<!--[![Power analysis via simulations](../thumbnails/power-analysis-via-simulations.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/power-analysis-via-simulations.pdf "Power analysis via simulations")-->
-### [Slides not yet available]
+[![Power analysis via simulations](../thumbnails/power-analysis-via-simulations.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/19_power-analysis-via-simulations.pdf "Power analysis via simulations")

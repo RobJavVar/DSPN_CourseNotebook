@@ -589,10 +589,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulating-data-1-points">1. Simulating data (1 points)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-analysis-function-2-pts">2. <code class="docutils literal notranslate"><span class="pre">run_analysis()</span></code> function (2 pts)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat-analysis-function-3-pts">3. <code class="docutils literal notranslate"><span class="pre">repeat_analysis()</span></code> function (3 pts)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-different-sample-sizes-2-pts">4. Testing different sample sizes (2 pts)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulating-data-1-point">1. Simulating data (1 point)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-analysis-function-2-points">2. <code class="docutils literal notranslate"><span class="pre">run_analysis()</span></code> function (2 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat-analysis-function-3-points">3. <code class="docutils literal notranslate"><span class="pre">repeat_analysis()</span></code> function (3 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-different-sample-sizes-2-points">4. Testing different sample sizes (2 points)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-2-pts">5. Reflection (2 pts)</a></li>
 </ul>
             </nav>
@@ -609,14 +609,14 @@ document.write(`
 <h1>Exercise 15: Power analyses<a class="headerlink" href="#exercise-15-power-analyses" title="Link to this heading">#</a></h1>
 <p>This  assignment is designed to give you practice with Monte Carlo methods to conduct power analyses via simulation. You won’t need to load in any data for this homework. We will, however, be using parts of the homework from last week.</p>
 <hr class="docutils" />
-<section id="simulating-data-1-points">
-<h2>1. Simulating data (1 points)<a class="headerlink" href="#simulating-data-1-points" title="Link to this heading">#</a></h2>
+<section id="simulating-data-1-point">
+<h2>1. Simulating data (1 point)<a class="headerlink" href="#simulating-data-1-point" title="Link to this heading">#</a></h2>
 <p>Pull your <code class="docutils literal notranslate"><span class="pre">simulate_data()</span></code> function from your last homework and add it below.</p>
 <p>As a reminder, this function simulates the relationship between age, word reading experience, and reading comprehension skill.</p>
 <p><code class="docutils literal notranslate"><span class="pre">c</span></code> is reading comprehension, and <code class="docutils literal notranslate"><span class="pre">x</span></code> is word reading experience.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">sample_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="c1"># How many children in data set? </span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">sample_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="c1"># How many children in data set?</span>
 <span class="n">age_lo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">80</span><span class="w">     </span><span class="c1"># minimum age, in months</span>
 <span class="n">age_hi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">200</span><span class="w">    </span><span class="c1"># maximum age, in months</span>
 <span class="n">beta_xa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="w">   </span><span class="c1"># amount by which experience changes for increase of one month in age</span>
@@ -624,12 +624,12 @@ document.write(`
 <span class="n">sd_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="w">       </span><span class="c1"># standard dev of gaussian noise term, epsilon_x</span>
 <span class="n">beta_ca</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="w">   </span><span class="c1"># amount that comprehension score improves for every increase of one unit in age</span>
 <span class="n">beta_cx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="w">     </span><span class="c1"># amount that comprehension score improves for every increase of one unit in reading experience</span>
-<span class="n">beta_c0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="w">    </span><span class="c1"># comprehension score when reading experience is 0. </span>
+<span class="n">beta_c0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="w">    </span><span class="c1"># comprehension score when reading experience is 0.</span>
 <span class="n">sd_c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">85</span><span class="w">      </span><span class="c1"># standard dev of gaussian noise term, epsilon_c</span>
 
 <span class="n">simulate_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">sample_size</span><span class="p">,</span><span class="w"> </span><span class="n">age_lo</span><span class="p">,</span><span class="w"> </span><span class="n">age_hi</span><span class="p">,</span><span class="w"> </span><span class="n">beta_xa</span><span class="p">,</span><span class="w"> </span><span class="n">beta_x0</span><span class="p">,</span><span class="w"> </span><span class="n">sd_x</span><span class="p">,</span><span class="w"> </span><span class="n">beta_ca</span><span class="p">,</span><span class="w"> </span><span class="n">beta_cx</span><span class="p">,</span><span class="w"> </span><span class="n">beta_c0</span><span class="p">,</span><span class="w"> </span><span class="n">sd_c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="c1"># WRITE YOUR CODE HERE</span>
-<span class="w">     </span>
+
 <span class="w">      </span><span class="kr">return</span><span class="p">(</span><span class="nf">data.frame</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="n">age</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">))</span><span class="w"> </span><span class="c1"># it&#39;s actually bad form to have a variable named &quot;c&quot; in R, my bad...</span>
 <span class="p">}</span>
 
@@ -641,8 +641,8 @@ document.write(`
 </div>
 </section>
 <hr class="docutils" />
-<section id="run-analysis-function-2-pts">
-<h2>2. <code class="docutils literal notranslate"><span class="pre">run_analysis()</span></code> function (2 pts)<a class="headerlink" href="#run-analysis-function-2-pts" title="Link to this heading">#</a></h2>
+<section id="run-analysis-function-2-points">
+<h2>2. <code class="docutils literal notranslate"><span class="pre">run_analysis()</span></code> function (2 points)<a class="headerlink" href="#run-analysis-function-2-points" title="Link to this heading">#</a></h2>
 <p>Last week, we looked at whether word reading experience(<code class="docutils literal notranslate"><span class="pre">x</span></code>) mediated the relation between <code class="docutils literal notranslate"><span class="pre">age</span></code> and reading comprehension (<code class="docutils literal notranslate"><span class="pre">c</span></code>).</p>
 <p>Now we’re going to use our <code class="docutils literal notranslate"><span class="pre">simulate_data()</span></code> function to conduct a power analysis. The goal is to determine how many participants we would need in order to detect both the mediated and the direct effects in this data.</p>
 <p><em>Note: We’re going to pretend for the sake of simplicity that we don’t have any control over the ages of the children we get (so ages are generated using <code class="docutils literal notranslate"><span class="pre">runif(sample_size,</span> <span class="pre">age_lo,</span> <span class="pre">age_hi)</span></code>, although of course this would be an unusual situation in reality.</em></p>
@@ -657,24 +657,24 @@ document.write(`
 </div>
 </section>
 <hr class="docutils" />
-<section id="repeat-analysis-function-3-pts">
-<h2>3. <code class="docutils literal notranslate"><span class="pre">repeat_analysis()</span></code> function (3 pts)<a class="headerlink" href="#repeat-analysis-function-3-pts" title="Link to this heading">#</a></h2>
+<section id="repeat-analysis-function-3-points">
+<h2>3. <code class="docutils literal notranslate"><span class="pre">repeat_analysis()</span></code> function (3 points)<a class="headerlink" href="#repeat-analysis-function-3-points" title="Link to this heading">#</a></h2>
 <p>Next fill in the function <code class="docutils literal notranslate"><span class="pre">repeat_analysis()</span></code> below so that it simulates and analyzes data <code class="docutils literal notranslate"><span class="pre">num_simulations</span></code> times. Store the outputs from each simulation in the <code class="docutils literal notranslate"><span class="pre">simouts</span></code> matrix. Calculate and return the coverage across all the simulations run for both ACME and ADE.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">repeat_analysis</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">num_simulations</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p">,</span><span class="w"> </span><span class="n">sample_size</span><span class="p">,</span><span class="w"> </span><span class="n">age_lo</span><span class="p">,</span><span class="w"> </span><span class="n">age_hi</span><span class="p">,</span><span class="w"> </span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">repeat_analysis</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">num_simulations</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p">,</span><span class="w"> </span><span class="n">sample_size</span><span class="p">,</span><span class="w"> </span><span class="n">age_lo</span><span class="p">,</span><span class="w"> </span><span class="n">age_hi</span><span class="p">,</span>
 <span class="w">        </span><span class="n">beta_xa</span><span class="p">,</span><span class="w"> </span><span class="n">beta_x0</span><span class="p">,</span><span class="w"> </span><span class="n">sd_x</span><span class="p">,</span><span class="w"> </span><span class="n">beta_ca</span><span class="p">,</span><span class="w"> </span><span class="n">beta_cx</span><span class="p">,</span><span class="w"> </span><span class="n">beta_c0</span><span class="p">,</span><span class="w"> </span><span class="n">sd_c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1"># Initialize simouts matrix for storing each output from run_analysis()</span>
 <span class="w">    </span><span class="n">simouts</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">num_simulations</span><span class="o">*</span><span class="m">4</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="o">=</span><span class="n">num_simulations</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="o">=</span><span class="m">4</span><span class="p">)</span>
-<span class="w">    </span>
+
 <span class="w">    </span><span class="c1"># Start simulating</span>
 <span class="w">    </span><span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">num_simulations</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="c1"># WRITE YOUR CODE HERE</span>
-<span class="w">     </span>
+
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span>
+
 <span class="w">    </span><span class="c1"># Calculate coverage for both ACME and ADE estimates using p-values in simouts</span>
-<span class="w">    </span><span class="n">ACME_cov</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1"># FILL THIS IN </span>
+<span class="w">    </span><span class="n">ACME_cov</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1"># FILL THIS IN</span>
 <span class="w">    </span><span class="n">ADE_cov</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="c1"># FILL THIS IN</span>
 
 <span class="w">    </span><span class="kr">return</span><span class="p">(</span><span class="nf">list</span><span class="p">(</span><span class="n">ACME_cov</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ACME_cov</span><span class="p">,</span><span class="w"> </span><span class="n">ADE_cov</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ADE_cov</span><span class="p">))</span>
@@ -693,8 +693,8 @@ document.write(`
 </div>
 </section>
 <hr class="docutils" />
-<section id="testing-different-sample-sizes-2-pts">
-<h2>4. Testing different sample sizes (2 pts)<a class="headerlink" href="#testing-different-sample-sizes-2-pts" title="Link to this heading">#</a></h2>
+<section id="testing-different-sample-sizes-2-points">
+<h2>4. Testing different sample sizes (2 points)<a class="headerlink" href="#testing-different-sample-sizes-2-points" title="Link to this heading">#</a></h2>
 <p>Finally, do the same thing (10 simulations, alpha criterion of 0.01) but for 5 different sample sizes: 50, 75, 100, 125, 150. You can do this using <code class="docutils literal notranslate"><span class="pre">map</span></code> (as in the tutorial), or a simple <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, or by calculating each individually. Up to you! This should take around 3 minutes to run.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -718,15 +718,16 @@ document.write(`
 <blockquote>
 <div><p><em>Write your response here.</em></p>
 </div></blockquote>
-<p><strong>Given</strong> how we generated the data, why was the direct effect harder to detect than the mediated effect?</p>
+<p>Given how we generated the data, why was the direct effect harder to detect than the mediated effect?</p>
 <blockquote>
 <div><p><em>Write your response here.</em></p>
 </div></blockquote>
-<p><strong>DUE:</strong> 5pm EST, March 31, 2026</p>
+<p><strong>DUE:</strong> 11:59pm EST, March 31, 2026</p>
 <p><strong>IMPORTANT</strong> Did you collaborate with anyone on this assignment? If so, list their names here.</p>
 <blockquote>
 <div><p><em>Someone’s Name</em></p>
 </div></blockquote>
+<p><strong>GenAI Utilization</strong> Did you utilize any generative AI tools on this assignment? If so, please list the item and the paste respective prompt you used.</p>
 </section>
 </section>
 
@@ -794,10 +795,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulating-data-1-points">1. Simulating data (1 points)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-analysis-function-2-pts">2. <code class="docutils literal notranslate"><span class="pre">run_analysis()</span></code> function (2 pts)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat-analysis-function-3-pts">3. <code class="docutils literal notranslate"><span class="pre">repeat_analysis()</span></code> function (3 pts)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-different-sample-sizes-2-pts">4. Testing different sample sizes (2 pts)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulating-data-1-point">1. Simulating data (1 point)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-analysis-function-2-points">2. <code class="docutils literal notranslate"><span class="pre">run_analysis()</span></code> function (2 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repeat-analysis-function-3-points">3. <code class="docutils literal notranslate"><span class="pre">repeat_analysis()</span></code> function (3 points)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-different-sample-sizes-2-points">4. Testing different sample sizes (2 points)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-2-pts">5. Reflection (2 pts)</a></li>
 </ul>
   </nav></div>
