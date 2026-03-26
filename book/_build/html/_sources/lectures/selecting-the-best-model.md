@@ -7,8 +7,10 @@
 
 ## Lecture (Video)
 
-<!--[![Selecting the 'best' model](../thumbnails/selecting-the-best-model.jpeg)](https://www.youtube.com/watch?v=Ca9yQmOriEY "Selecting the 'best' model")-->
-### [Video not yet available]
+<video width="800" controls poster="https://raw.githubusercontent.com/RobJavVar/DSPN_CourseNotebook/main/book/thumbnails/selecting-the-best-model.jpeg">
+  <source src="https://github.com/RobJavVar/DSPN_CourseNotebook/raw/refs/heads/main/book/recordings/20_selecting-the-best-model.mp4" type="video/mp4">
+</video>
+
 
 
 ## Slides (PDF)

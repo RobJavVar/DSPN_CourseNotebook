@@ -7,8 +7,9 @@
 
 ## Lecture (Video)
 
-<!--[![Resampling methods](../thumbnails/resampling-methods.jpeg)](https://www.youtube.com/watch?v=aDfEYKdkIGI "Resampling methods")-->
-### [Video not yet available]
+<video width="800" controls poster="https://raw.githubusercontent.com/RobJavVar/DSPN_CourseNotebook/main/book/thumbnails/resampling-methods.jpeg">
+  <source src="https://github.com/RobJavVar/DSPN_CourseNotebook/raw/refs/heads/main/book/recordings/17_resampling-methods.mp4" type="video/mp4">
+</video>
 
 
 ## Slides (PDF)

@@ -7,8 +7,9 @@
 
 ## Lecture (Video)
 
-<!--[![Power analysis via simulations](../thumbnails/power-analysis-via-simulations.jpeg)](https://youtu.be/F2-EeVglCow "Power analysis via simulations")-->
-### [Video not yet available]
+<video width="800" controls poster="https://raw.githubusercontent.com/RobJavVar/DSPN_CourseNotebook/main/book/thumbnails/power-analysis-via-simulations.jpeg">
+  <source src="https://github.com/RobJavVar/DSPN_CourseNotebook/raw/refs/heads/main/book/recordings/19_power-analyses.mp4" type="video/mp4">
+</video>
 
 ## Slides (PDF)
 
