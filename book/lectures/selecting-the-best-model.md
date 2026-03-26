@@ -13,5 +13,5 @@
 
 ## Slides (PDF)
 
-<!--[![Selecting the 'best' model](../thumbnails/selecting-the-best-model.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/selecting-the-best-model.pdf "Selecting the 'best' model")-->
-### [Slides not yet available]
+[![Selecting the 'best' model](../thumbnails/selecting-the-best-model.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/20_selecting-the-best-model.pdf "Selecting the 'best' model")
+

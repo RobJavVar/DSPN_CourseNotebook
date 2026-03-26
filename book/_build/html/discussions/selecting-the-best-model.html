@@ -545,9 +545,23 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="discussion-questions">
 <h1>Discussion questions<a class="headerlink" href="#discussion-questions" title="Link to this heading">#</a></h1>
 <ol class="arabic simple">
-<li><p>Stepwise selection methods are preferred over full model subset selection as the number of features (p) in your model increases due to their relative lower computational burden. What are cases where stepwise selection methods would give you dramatically different “best” models than a full model subset method?</p></li>
-<li><p>Information criterion, like AIC and BIC, are meant to adjust your goodness-of-fit measure to account for the complexity that arises with increased number of parameters in your model. Given how they are implemented they are not perfect adjustments. Is the bias of these sorts of measures in favor or against more complex models? Be specific as to why you think they may bias towards selection of models with more or fewer numbers of parameters.</p></li>
+<li><p>You run several model selection methods on the same dataset and they don’t agree:</p></li>
 </ol>
+<ul class="simple">
+<li><p>cross-validation favors one model</p></li>
+<li><p>AIC suggests a slightly more complex one</p></li>
+<li><p>BIC prefers a simpler alternative
+How do you decide which result to trust?</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>We say we want the most parsimonious model, but what does that mean in practice?</p></li>
+</ol>
+<ul class="simple">
+<li><p>Is the most parsimonious model always the one with the fewest predictors?</p></li>
+<li><p>Is it the model that generalizes best to new data?</p></li>
+<li><p>Can a more complex model ever be more parsimonious if it captures the underlying structure better?</p></li>
+<li><p>How would your answer change depending on whether your goal is prediction vs explanation?</p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
