@@ -1,5 +1,13 @@
 # Discussion questions
 
-1. Stepwise selection methods are preferred over full model subset selection as the number of features (p) in your model increases due to their relative lower computational burden. What are cases where stepwise selection methods would give you dramatically different “best” models than a full model subset method?
+1. You run several model selection methods on the same dataset and they don’t agree:
+*   cross-validation favors one model
+*   AIC suggests a slightly more complex one
+*   BIC prefers a simpler alternative
+How do you decide which result to trust?
 
-2. Information criterion, like AIC and BIC, are meant to adjust your goodness-of-fit measure to account for the complexity that arises with increased number of parameters in your model. Given how they are implemented they are not perfect adjustments. Is the bias of these sorts of measures in favor or against more complex models? Be specific as to why you think they may bias towards selection of models with more or fewer numbers of parameters.
+2. We say we want the most parsimonious model, but what does that mean in practice?
+*   Is the most parsimonious model always the one with the fewest predictors?
+*   Is it the model that generalizes best to new data?
+*   Can a more complex model ever be more parsimonious if it captures the underlying structure better?
+*   How would your answer change depending on whether your goal is prediction vs explanation?
