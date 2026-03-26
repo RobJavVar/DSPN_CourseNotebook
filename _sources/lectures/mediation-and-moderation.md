@@ -7,8 +7,9 @@
 
 ## Lecture (Video)
 
-<!--[![Mediation and moderation](../thumbnails/mediation-and-moderation.jpeg)](https://youtu.be/4tBi1BArYd8 "Mediation and moderation")-->
-### [Video not yet available]
+<video width="800" controls poster="https://raw.githubusercontent.com/RobJavVar/DSPN_CourseNotebook/main/book/thumbnails/mediation-and-moderation.jpeg">
+  <source src="https://github.com/RobJavVar/DSPN_CourseNotebook/raw/refs/heads/main/book/recordings/18_mediation-moderation.mp4" type="video/mp4">
+</video>
 
 
 ## Slides (PDF)
