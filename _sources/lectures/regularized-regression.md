@@ -12,5 +12,5 @@
 
 ## Slides (PDF)
 
-<!--[![Regularized regression](../thumbnails/regularized-regression.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/regularized-regression.pdf "Regularized regression")-->
-### [Slides not yet available]
+[![Regularized regression](../thumbnails/regularized-regression.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/21_regularized-regression.pdf "Regularized regression")
+
