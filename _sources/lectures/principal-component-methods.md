@@ -13,5 +13,4 @@
 
 ## Slides (PDF)
 
-<!--[![Principal component methods](../thumbnails/principal-component-methods.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/principal-component-methods.pdf "Principal component methods")-->
-### [Slides not yet available]
+[![Principal component methods](../thumbnails/principal-component-methods.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/22_principal-component-methods.pdf "Principal component methods")

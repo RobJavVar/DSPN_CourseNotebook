@@ -1,5 +1,5 @@
 # Discussion questions
 
-1.	Principal component regression (PCR) and partial least squares (PLS) both work by effectively reducing the complexity (i.e., variance) of a model by accounting for correlations across variables. How is this different from ridge regression, which also accounts for correlational structure in the data set to manage model complexity?
+1.	PCA gives you clean, orthogonal components that explain most of the variance. Factor Analysis gives you latent constructs that are harder to estimate but more interpretable. If both models fit the data “well,” how do you decide which representation is truer?
 
-2.	How can Principal Component Analysis (PCA) and Factor Analyses (FA) differ in their assumptions and goals? What parts of the output might be used to gain insight into underlying structure of your data? In what ways can this structure be used to identify relevant constructs not previously considered in your project, namely in exploratory contexts.
+2.	You run PCA on your predictors and drop low-variance components. Your model performance gets worse, not better. How could directions with low variance still be important for prediction? What does this say about using 'variance explained' as a proxy for 'importance'?
