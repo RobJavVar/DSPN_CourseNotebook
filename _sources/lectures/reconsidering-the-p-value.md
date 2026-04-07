@@ -13,5 +13,4 @@
 
 ## Slides (PDF)
 
-<!--[![Reconsidering the p-value](../thumbnails/reconsidering-the-p-value.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/reconsidering-the-p-value.pdf "Reconsidering the p-value")-->
-### [Slides not yet available]
+[![Reconsidering the p-value](../thumbnails/reconsidering-the-p-value.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/22_reconsidering-the-p-value.pdf "Reconsidering the p-value")
