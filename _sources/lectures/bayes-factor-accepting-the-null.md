@@ -12,4 +12,4 @@
 
 ## Slides (PDF)
 
-[![Bayes factor](../thumbnails/bayes-factor.jpeg)](httpshttps://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/24_bayes-factor.pdf "Bayes factor")
+[![Bayes factor](../thumbnails/bayes-factor.jpeg)](https://github.com/RobJavVar/DSPN_CourseNotebook/blob/main/book/slides/24_bayes-factor.pdf "Bayes factor")
